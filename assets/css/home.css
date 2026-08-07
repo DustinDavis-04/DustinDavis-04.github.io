@@ -7,8 +7,52 @@
 
 /* #region HOME PAGE INTRODUCTION */
 
+/* Split the hero into the introduction and the system status panel */
 .hero-section {
-    max-width: 850px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 285px;
+    gap: 70px;
+    align-items: center;
+
+    width: 100%;
+    max-width: none;
+}
+
+
+/* Keep the main introduction readable on larger screens */
+.hero-content {
+    max-width: 720px;
+}
+
+
+/* Separate the first and last name so the last name can carry the archive style */
+.hero-name {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 18px;
+
+    line-height: 0.9;
+}
+
+
+/* Keep the first name strong and easy to read */
+.hero-first-name {
+    color: var(--text);
+    font-size: clamp(3.5rem, 8vw, 5.7rem);
+    font-weight: 700;
+}
+
+
+/* Use an outlined treatment to give the hero more visual identity */
+.hero-last-name {
+    margin-top: 8px;
+
+    color: transparent;
+    font-size: clamp(3.5rem, 8vw, 5.7rem);
+    font-weight: 700;
+
+    -webkit-text-stroke: 1px var(--accent);
 }
 
 
@@ -18,12 +62,23 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    margin-top: 18px;
+    margin-top: 24px;
 
     color: var(--primary);
     font-size: 1.15rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
+}
+
+
+/* Keep the introduction readable without stretching too far across the screen */
+.intro-text {
+    max-width: 700px;
+    margin-top: 28px;
+
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 
@@ -33,7 +88,7 @@
     flex-wrap: wrap;
     gap: 18px;
 
-    margin-top: 36px;
+    margin-top: 34px;
 }
 
 
@@ -49,11 +104,11 @@
     padding: 0 24px;
 
     border: 1px solid var(--accent);
-    border-radius: 4px;
+    border-radius: 5px;
 
     font-size: 0.82rem;
     font-weight: bold;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.06rem;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -67,14 +122,17 @@
 
 /* The primary action gets the stronger visual treatment */
 .primary-button {
-    background: var(--accent);
-    color: #1f252b;
+    background: linear-gradient(90deg,
+            #2f63d8,
+            var(--accent));
+
+    color: #f5fbff;
 }
 
 
 /* The secondary action stays quieter until it is selected */
 .secondary-button {
-    background: transparent;
+    background: rgba(24, 31, 40, 0.35);
     color: var(--text);
 }
 
@@ -85,8 +143,12 @@
 .secondary-button:hover,
 .secondary-button:focus-visible {
     transform: translateY(-2px);
-    box-shadow: 0 0 14px rgba(34, 211, 238, 0.3);
+
+    box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.2),
+        0 0 18px rgba(34, 211, 238, 0.12);
 }
+
 
 .secondary-button:hover,
 .secondary-button:focus-visible {
@@ -94,7 +156,143 @@
 }
 
 
-/* Stack the actions on narrow screens so they stay easy to select */
+/* Give the status panel the same interface feel as the original mockup */
+.system-status-panel {
+    position: relative;
+
+    padding: 26px 22px;
+
+    border: 1px solid rgba(34, 211, 238, 0.28);
+    border-radius: 18px;
+
+    background: rgba(18, 26, 36, 0.55);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.12),
+        inset 0 0 24px rgba(34, 211, 238, 0.025);
+}
+
+
+/* Add a small cyan interface line along the top edge */
+.system-status-panel::before {
+    position: absolute;
+    top: -1px;
+    left: 24px;
+
+    width: 66px;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+            var(--accent),
+            transparent);
+
+    content: "";
+}
+
+
+/* Keep the status label and online indicator on the same row */
+.status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Use small interface labels instead of normal paragraph styling */
+.status-label,
+.status-online {
+    margin: 0;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+}
+
+
+/* Keep the system label subtle */
+.status-label {
+    color: var(--muted);
+}
+
+
+/* Make the online state easy to identify without overpowering the panel */
+.status-online {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #55e6b3;
+}
+
+
+/* The indicator gives the status panel a little interface detail */
+.status-indicator {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #55e6b3;
+
+    box-shadow: 0 0 8px rgba(85, 230, 179, 0.75);
+}
+
+
+/* Each row presents one piece of portfolio information */
+.status-item {
+    display: grid;
+    grid-template-columns: 95px 1fr;
+    gap: 18px;
+    align-items: start;
+
+    padding: 14px 0;
+
+    border-top: 1px solid rgba(110, 150, 180, 0.16);
+}
+
+
+/* The first row should not need a divider above it */
+.status-header+.status-item {
+    border-top: 0;
+}
+
+
+/* Keep field names quieter than the actual values */
+.status-key {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+
+/* Align the important information cleanly on the right */
+.status-value {
+    color: var(--text);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    text-align: right;
+}
+
+
+/* Move the status panel below the hero text on smaller screens */
+@media (max-width: 900px) {
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .system-status-panel {
+        max-width: 520px;
+    }
+
+}
+
+
+/* Stack the actions and status values on narrow screens */
 @media (max-width: 600px) {
 
     .hero-actions {
@@ -105,6 +303,15 @@
     .primary-button,
     .secondary-button {
         width: 100%;
+    }
+
+    .status-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .status-value {
+        text-align: left;
     }
 
 }
@@ -125,50 +332,148 @@
 }
 
 
-/* Keep section headings consistent throughout the portfolio */
+/* Give the heading a clearer archive-style lead-in */
 .section-heading {
+    position: relative;
+
     max-width: 760px;
-    margin-bottom: 42px;
+    margin-bottom: 46px;
+    padding-left: 24px;
 }
 
+
+/* Add a small interface marker beside the section label */
+.section-heading::before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.55);
+
+    content: "";
+}
+
+
+/* Add a short circuit-style line from the marker */
+.section-heading::after {
+    position: absolute;
+    top: 11px;
+    left: 7px;
+
+    width: 46px;
+    height: 1px;
+
+    background: linear-gradient(90deg,
+            var(--accent),
+            transparent);
+
+    content: "";
+}
+
+
+/* Keep the label clear above the section title */
+.section-heading .system-label {
+    margin-left: 42px;
+}
+
+
+/* Keep section headings consistent throughout the portfolio */
 .section-heading h2 {
     margin-top: 14px;
 
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 
 /* Split the profile into a summary and quick reference details */
 .profile-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: 42px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+    gap: 52px;
+    align-items: start;
 }
 
 
 /* Keep the profile paragraphs readable without stretching too wide */
 .profile-summary {
     max-width: 720px;
+    padding-top: 10px;
 }
+
+
+/* Add a subtle vertical interface line beside the profile summary */
+.profile-summary {
+    position: relative;
+    padding-left: 22px;
+}
+
+
+.profile-summary::before {
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 0;
+
+    width: 1px;
+
+    background: linear-gradient(180deg,
+            var(--accent),
+            rgba(34, 211, 238, 0.08));
+
+    content: "";
+}
+
 
 .profile-summary p {
     color: var(--muted);
-    line-height: 1.8;
-}
-
-.profile-summary p + p {
-    margin-top: 18px;
+    line-height: 1.85;
 }
 
 
-/* Display key profile details in a clean console-style panel */
+.profile-summary p+p {
+    margin-top: 20px;
+}
+
+
+/* Display key profile details in a cleaner archive-style panel */
 .profile-details {
-    padding: 28px;
+    position: relative;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.78);
+    padding: 30px;
+
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
+
+    background: rgba(18, 26, 36, 0.45);
+
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.1),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
+}
+
+
+/* Add a small cyan line to tie this panel to the hero status panel */
+.profile-details::before {
+    position: absolute;
+    top: -1px;
+    left: 26px;
+
+    width: 62px;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+            var(--accent),
+            transparent);
+
+    content: "";
 }
 
 
@@ -176,15 +481,18 @@
 .profile-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 7px;
 
     padding: 18px 0;
-    border-bottom: 1px solid var(--panel-border);
+
+    border-bottom: 1px solid rgba(110, 150, 180, 0.14);
 }
+
 
 .profile-item:first-child {
     padding-top: 0;
 }
+
 
 .profile-item:last-child {
     padding-bottom: 0;
@@ -195,15 +503,20 @@
 /* Use the label as a small console heading */
 .profile-label {
     color: var(--accent);
+
     font-size: 0.72rem;
     font-weight: bold;
     letter-spacing: 0.12rem;
     text-transform: uppercase;
 }
 
+
+/* Keep the profile values easy to scan */
 .profile-value {
     color: var(--text);
+
     font-size: 1rem;
+    line-height: 1.5;
 }
 
 
@@ -212,6 +525,33 @@
 
     .profile-grid {
         grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .profile-details {
+        max-width: 560px;
+    }
+
+}
+
+
+/* Tighten the interface markers on narrow screens */
+@media (max-width: 600px) {
+
+    .section-heading {
+        padding-left: 18px;
+    }
+
+    .section-heading .system-label {
+        margin-left: 34px;
+    }
+
+    .section-heading::after {
+        width: 36px;
+    }
+
+    .profile-summary {
+        padding-left: 16px;
     }
 
 }
@@ -228,7 +568,7 @@
 /* #region PROJECT ARCHIVE */
 
 .projects-section {
-    padding: 110px 0;
+    padding: 20px 0 110px;
 }
 
 
@@ -247,6 +587,8 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+
+    margin-top: 10px;
 }
 
 
@@ -259,16 +601,25 @@
 
 /* Each project is treated like its own archive entry */
 .project-card {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
     min-height: 370px;
     height: 100%;
-    padding: 28px;
+    padding: 30px 28px 28px;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.82);
+    overflow: hidden;
+
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
+
+    background: rgba(18, 26, 36, 0.48);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.08),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
 
     transition:
         border-color 200ms ease,
@@ -277,11 +628,34 @@
 }
 
 
+/* Add a small interface line to the top of each archive entry */
+.project-card::before {
+    position: absolute;
+    top: -1px;
+    left: 24px;
+
+    width: 68px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
 /* Give the card a small response when someone moves over it */
 .project-card-link:hover .project-card,
 .project-card-link:focus-visible .project-card {
     border-color: var(--accent);
-    box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
+
+    box-shadow:
+        0 0 18px rgba(34, 211, 238, 0.14),
+        0 16px 34px rgba(0, 0, 0, 0.12);
+
     transform: translateY(-4px);
 }
 
@@ -293,20 +667,48 @@
     justify-content: space-between;
     gap: 16px;
 
-    margin-bottom: 26px;
+    margin-bottom: 28px;
 }
 
+
+/* Treat the number more like an archive identifier */
 .project-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     color: var(--accent);
-    font-size: 1.2rem;
+
+    font-size: 1.05rem;
     font-weight: bold;
+    letter-spacing: 0.08rem;
 }
 
+
+/* Add the archive label without changing the HTML */
+.project-number::before {
+    margin-bottom: 4px;
+
+    color: rgba(34, 211, 238, 0.58);
+
+    font-size: 0.68rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+
+    content: "ARCHIVE";
+}
+
+
+/* Keep the category as supporting metadata */
 .project-category {
+    max-width: 150px;
+
     color: var(--muted);
+
     font-size: 0.68rem;
     font-weight: bold;
     letter-spacing: 0.08rem;
+    line-height: 1.4;
     text-align: right;
     text-transform: uppercase;
 }
@@ -317,7 +719,9 @@
     margin-bottom: 18px;
 
     color: var(--text);
+
     font-size: 1.5rem;
+    line-height: 1.25;
 }
 
 
@@ -326,15 +730,20 @@
     flex-grow: 1;
 
     color: var(--muted);
+
     line-height: 1.75;
 }
 
 
 /* Keep the action hidden until someone interacts with the card */
 .project-card-action {
+    position: relative;
+
     margin-top: 28px;
+    padding-left: 18px;
 
     color: var(--accent);
+
     font-size: 0.78rem;
     font-weight: bold;
     letter-spacing: 0.08rem;
@@ -349,6 +758,23 @@
 }
 
 
+/* Add a small interface marker beside the project action */
+.project-card-action::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 8px;
+    height: 1px;
+
+    background: var(--accent);
+
+    content: "";
+
+    transform: translateY(-50%);
+}
+
+
 /* Reveal the action when the card is hovered or selected with the keyboard */
 .project-card-link:hover .project-card-action,
 .project-card-link:focus-visible .project-card-action {
@@ -360,12 +786,32 @@
 /* Drop to one column when the cards no longer have enough room */
 @media (max-width: 900px) {
 
+    .projects-section {
+        padding-top: 60px;
+    }
+
     .project-grid {
         grid-template-columns: 1fr;
     }
 
     .project-card {
         min-height: auto;
+    }
+
+}
+
+
+/* Keep archive metadata readable on narrow screens */
+@media (max-width: 500px) {
+
+    .project-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .project-category {
+        max-width: none;
+        text-align: left;
     }
 
 }
