@@ -273,3 +273,113 @@ h1 {
     }
 
 }
+
+
+/*================================================
+    Home Page Introduction
+
+    This section introduces who I am before
+    directing visitors into the project archive.
+================================================*/
+
+.hero-section {
+    max-width: 850px;
+}
+
+
+/* Keep the professional roles visible without competing with the name */
+.hero-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 18px;
+
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+
+/* Keep the main action buttons together below the introduction */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-top: 36px;
+}
+
+
+/* Shared button styling keeps both actions consistent */
+.primary-button,
+.secondary-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        background 200ms ease,
+        color 200ms ease,
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+
+/* The primary action gets the stronger visual treatment */
+.primary-button {
+    background: var(--accent);
+    color: #1f252b;
+}
+
+
+/* The secondary action stays quieter until it is selected */
+.secondary-button {
+    background: transparent;
+    color: var(--text);
+}
+
+
+/* Lift the buttons slightly so the interaction feels responsive */
+.primary-button:hover,
+.primary-button:focus-visible,
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(34, 211, 238, 0.3);
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    background: rgba(34, 211, 238, 0.08);
+}
+
+
+/* Stack the actions on narrow screens so they stay easy to select */
+@media (max-width: 600px) {
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+}
