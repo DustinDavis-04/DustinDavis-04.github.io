@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1600 900"
+     preserveAspectRatio="none">
+
+    <!-- Circuit traces stay near the edges so the page content remains readable -->
+    <g fill="none"
+       stroke="#67e8f9"
+       stroke-width="1.5"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       opacity="0.11">
+
+        <!-- Upper-left circuit paths -->
+        <path d="M0 90 H150 L205 145 H330" />
+        <path d="M0 135 H110 L165 190 H280 L330 240" />
+        <path d="M0 190 H70 L125 245 H235" />
+        <path d="M40 0 V70 L95 125" />
+        <path d="M110 0 V45 L165 100 H255" />
+        <path d="M190 0 V70 L245 125 H360" />
+
+        <!-- Lower-left circuit paths -->
+        <path d="M0 690 H135 L190 635 H300" />
+        <path d="M0 745 H90 L145 690 H250 L305 635" />
+        <path d="M0 810 H165 L220 755 H345" />
+        <path d="M65 900 V825 L120 770" />
+        <path d="M155 900 V850 L210 795 H315" />
+
+        <!-- Upper-right circuit paths -->
+        <path d="M1600 90 H1450 L1395 145 H1270" />
+        <path d="M1600 145 H1490 L1435 200 H1325 L1275 250" />
+        <path d="M1600 205 H1530 L1475 260 H1365" />
+        <path d="M1560 0 V70 L1505 125" />
+        <path d="M1490 0 V45 L1435 100 H1345" />
+        <path d="M1410 0 V70 L1355 125 H1240" />
+
+        <!-- Lower-right circuit paths -->
+        <path d="M1600 685 H1465 L1410 630 H1300" />
+        <path d="M1600 745 H1510 L1455 690 H1350 L1295 635" />
+        <path d="M1600 810 H1435 L1380 755 H1255" />
+        <path d="M1535 900 V825 L1480 770" />
+        <path d="M1445 900 V850 L1390 795 H1285" />
+
+        <!-- Small connection nodes make the paths look like circuit traces -->
+        <circle cx="330" cy="145" r="4" />
+        <circle cx="280" cy="190" r="4" />
+        <circle cx="235" cy="245" r="4" />
+        <circle cx="300" cy="635" r="4" />
+        <circle cx="345" cy="755" r="4" />
+
+        <circle cx="1270" cy="145" r="4" />
+        <circle cx="1325" cy="200" r="4" />
+        <circle cx="1365" cy="260" r="4" />
+        <circle cx="1300" cy="630" r="4" />
+        <circle cx="1255" cy="755" r="4" />
+
+    </g>
+</svg>
