@@ -1,0 +1,148 @@
+/*================================================
+    Code Review
+
+    This page presents the recorded review and
+    summarizes the findings from each artifact.
+================================================*/
+
+/* #region CODE REVIEW */
+
+.code-review-section {
+    padding: 40px 0 110px;
+}
+
+
+/* Give the recorded review its own space near the top of the page */
+.review-video-section {
+    margin-top: 70px;
+}
+
+.review-video-section h2 {
+    margin-top: 12px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+
+/* Frame the embedded review video without adding unnecessary empty space */
+.code-review-content {
+    max-width: 900px;
+    margin-top: 28px;
+    padding: 12px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+
+    background: rgba(42, 47, 56, 0.82);
+}
+
+
+/* Keep the embedded review video responsive on different screen sizes */
+.code-review-video {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    border: 0;
+    border-radius: 4px;
+}
+
+
+/* Separate each artifact review into its own major section */
+.artifact-review {
+    margin-top: 90px;
+}
+
+
+/* Number and artifact title work like review metadata */
+.artifact-review-heading {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.review-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 8px rgba(34, 211, 238, 0.22),
+        inset 0 0 8px rgba(34, 211, 238, 0.08);
+}
+
+.artifact-review-heading h2 {
+    margin-top: 6px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+
+/* Main reading panel for the findings from each code review */
+.review-panel {
+    max-width: 900px;
+    margin-top: 28px;
+    padding: 32px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+
+    background: rgba(42, 47, 56, 0.82);
+}
+
+
+/* Break up the findings without making the page feel like a report */
+.review-panel h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.review-panel h3:first-child {
+    margin-top: 0;
+}
+
+
+/* Keep the review summaries comfortable to read */
+.review-panel p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.review-panel p + p {
+    margin-top: 18px;
+}
+
+
+/* Adjust spacing when the page gets narrow */
+@media (max-width: 600px) {
+
+    .code-review-content,
+    .review-panel {
+        padding: 24px;
+    }
+
+    .artifact-review-heading {
+        align-items: flex-start;
+    }
+
+    .review-number {
+        flex-shrink: 0;
+    }
+
+}
+
+/* #endregion */

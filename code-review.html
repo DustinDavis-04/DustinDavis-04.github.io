@@ -8,11 +8,20 @@
     <title>Code Review | Dustin Davis</title>
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/code-review.css">
 </head>
 
 <body>
 
-    <!-- Main navigation used across the portfolio -->
+
+    <!--================================================
+        Main Navigation
+
+        Shared navigation used across the portfolio.
+    ================================================-->
+
+    <!-- #region MAIN NAVIGATION -->
+
     <header class="site-header">
         <div class="header-content">
 
@@ -23,24 +32,47 @@
 
             <!-- Primary links for the main portfolio sections -->
             <nav class="main-navigation" aria-label="Main navigation">
-                <a class="navigation-link" href="index.html">Home</a>
-                <a class="navigation-link" href="index.html#profile">Profile</a>
-                <a class="navigation-link" href="index.html#projects">Projects</a>
+
+                <a class="navigation-link" href="index.html">
+                    Home
+                </a>
+
+                <a class="navigation-link" href="index.html#profile">
+                    Profile
+                </a>
+
+                <a class="navigation-link" href="index.html#projects">
+                    Projects
+                </a>
+
                 <a class="navigation-link active" href="code-review.html">
                     Code Review
                 </a>
+
                 <a class="navigation-link" href="self-assessment.html">
                     Self Assessment
                 </a>
+
             </nav>
 
         </div>
     </header>
 
+    <!-- #endregion -->
+
 
     <main class="site-shell">
 
-        <!-- Introduction to the capstone code review -->
+
+        <!--================================================
+            Code Review Introduction
+
+            This section explains the purpose of the code
+            review and how it guided the capstone enhancements.
+        ================================================-->
+
+        <!-- #region CODE REVIEW INTRODUCTION -->
+
         <section class="code-review-section">
 
             <div class="section-heading">
@@ -50,32 +82,294 @@
                 </p>
 
                 <h1>
-                    Reviewing the Original Artifacts
+                    Evaluating the Original Artifacts
                 </h1>
 
                 <p class="section-description">
-                    The code review evaluates the original artifacts selected
-                    for this portfolio and explains the improvements planned
-                    before the enhancement work was completed.
+                    Before beginning the capstone enhancements, I completed a
+                    detailed code review of each original artifact. The review
+                    helped me identify strengths, weaknesses, security concerns,
+                    design limitations, and opportunities for improvement before
+                    making changes to the projects.
                 </p>
 
             </div>
 
-            <!-- The final code review video will be added here -->
-            <div class="code-review-content">
+            <!-- #endregion -->
 
-                <p class="code-review-status">
-                    Code review video will be added here.
+
+            <!--================================================
+                Code Review Video
+
+                The recorded code review walks through the
+                original artifacts and planned improvements.
+            ================================================-->
+
+            <!-- #region CODE REVIEW VIDEO -->
+
+            <section class="review-video-section">
+
+                <p class="system-label">
+                    Recorded Review
                 </p>
 
-            </div>
+                <h2>
+                    Capstone Code Review
+                </h2>
+
+                <div class="code-review-content">
+
+                    <iframe class="code-review-video" src="https://www.youtube.com/embed/n9FA2oyy4iw"
+                        title="Milestone One Capstone Code Review"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Travlr Getaways Review
+
+                Main findings from the software engineering
+                review of the original Travlr application.
+            ================================================-->
+
+            <!-- #region TRAVLR CODE REVIEW -->
+
+            <section class="artifact-review">
+
+                <div class="artifact-review-heading">
+
+                    <span class="review-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <p class="system-label">
+                            Software Engineering
+                        </p>
+
+                        <h2>
+                            Travlr Getaways
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="review-panel">
+
+                    <h3>
+                        Review Findings
+                    </h3>
+
+                    <p>
+                        The original Travlr Getaways application had a strong
+                        full-stack foundation with separate public, API,
+                        database, and Angular administration areas. It already
+                        supported CRUD operations, MongoDB persistence,
+                        authentication, password hashing, and protected API
+                        routes.
+                    </p>
+
+                    <p>
+                        The review also identified several areas for
+                        improvement. These included inconsistent API responses,
+                        limited server-side validation, duplicate trip codes,
+                        weaknesses in the login workflow, hard-coded
+                        configuration values, limited automated testing, and
+                        security concerns that needed to be addressed before
+                        the project could represent a more polished
+                        application.
+                    </p>
+
+                    <h3>
+                        Enhancement Direction
+                    </h3>
+
+                    <p>
+                        These findings guided the enhancement toward stronger
+                        validation, protected administrative access, improved
+                        error handling, better data integrity, and a more
+                        consistent administrative user experience.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Grazioso Salvare Review
+
+                Main findings from the algorithms and data
+                structures review of the original dashboard.
+            ================================================-->
+
+            <!-- #region GRAZIOSO CODE REVIEW -->
+
+            <section class="artifact-review">
+
+                <div class="artifact-review-heading">
+
+                    <span class="review-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <p class="system-label">
+                            Algorithms &amp; Data Structures
+                        </p>
+
+                        <h2>
+                            Grazioso Salvare
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="review-panel">
+
+                    <h3>
+                        Review Findings
+                    </h3>
+
+                    <p>
+                        The original Grazioso Salvare project already provided
+                        an interactive dashboard with rescue filters, a data
+                        table, breed graph, map, reset controls, CSV export,
+                        and reusable MongoDB CRUD operations.
+                    </p>
+
+                    <p>
+                        The review showed that the original rescue logic was
+                        still based primarily on fixed pass-or-fail filtering.
+                        It also identified issues with the replacement Austin
+                        Animal Center datasets, hard-coded credentials,
+                        location assumptions, missing automated tests, unused
+                        starter code, and several callback and
+                        defensive-programming weaknesses.
+                    </p>
+
+                    <h3>
+                        Enhancement Direction
+                    </h3>
+
+                    <p>
+                        The review led to a new data-processing workflow that
+                        cleans the source data, matches intake and outcome
+                        records, calculates rescue suitability scores, ranks
+                        candidates, and handles missing location information
+                        more reliably.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Mobile Inventory App Review
+
+                Main findings from the database review of
+                the original Android inventory application.
+            ================================================-->
+
+            <!-- #region MOBILE INVENTORY CODE REVIEW -->
+
+            <section class="artifact-review">
+
+                <div class="artifact-review-heading">
+
+                    <span class="review-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <p class="system-label">
+                            Databases
+                        </p>
+
+                        <h2>
+                            Mobile Inventory App
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="review-panel">
+
+                    <h3>
+                        Review Findings
+                    </h3>
+
+                    <p>
+                        The original Mobile Inventory App already supported
+                        account creation, login, inventory CRUD operations,
+                        quantity management, detailed item information, and
+                        low inventory alerts using a local SQLite database.
+                    </p>
+
+                    <p>
+                        The review identified several important database and
+                        security limitations. Manufacturer and location
+                        information was repeated inside inventory records,
+                        passwords were stored in plain text, database upgrades
+                        destroyed existing data, deleted items were
+                        permanently removed, and there was no transaction
+                        history showing how inventory changed over time.
+                    </p>
+
+                    <h3>
+                        Enhancement Direction
+                    </h3>
+
+                    <p>
+                        These findings guided the database redesign toward
+                        normalization, foreign-key relationships, secure
+                        password storage, inventory history, soft deletion,
+                        improved location tracking, and a more realistic
+                        inventory-management workflow.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
 
         </section>
 
     </main>
 
 
+    <!--================================================
+        JavaScript
+
+        Shared site functionality is loaded here.
+    ================================================-->
+
+    <!-- #region JAVASCRIPT -->
+
     <script src="assets/js/main.js"></script>
+
+    <!-- #endregion -->
+
 
 </body>
 

@@ -1,0 +1,41 @@
+/*================================================
+    Professional Self Assessment
+
+    This page provides space for the full reflection
+    without making the home page too crowded.
+================================================*/
+
+/* #region PROFESSIONAL SELF ASSESSMENT */
+
+.assessment-section {
+    padding: 40px 0 110px;
+}
+
+
+/* Keep the assessment comfortable to read on larger screens */
+.assessment-content {
+    max-width: 850px;
+    margin-top: 48px;
+    padding: 36px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    background: rgba(42, 47, 56, 0.82);
+}
+
+.assessment-content p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+
+/* Reduce the panel spacing on smaller screens */
+@media (max-width: 600px) {
+
+    .assessment-content {
+        padding: 24px;
+    }
+
+}
+
+/* #endregion */

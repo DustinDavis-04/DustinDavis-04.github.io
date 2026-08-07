@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile Inventory App | Dustin Davis</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+
+<body>
+
+
+    <!--================================================
+        Main Navigation
+
+        Shared navigation used across the portfolio.
+    ================================================-->
+
+    <!-- #region MAIN NAVIGATION -->
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <!-- Small site name that stays visible across every page -->
+            <a class="site-brand" href="../index.html">
+                Dustin Davis
+            </a>
+
+            <!-- Primary links for the main portfolio sections -->
+            <nav class="main-navigation" aria-label="Main navigation">
+
+                <a class="navigation-link" href="../index.html">
+                    Home
+                </a>
+
+                <a class="navigation-link" href="../index.html#profile">
+                    Profile
+                </a>
+
+                <a class="navigation-link active" href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a class="navigation-link" href="../code-review.html">
+                    Code Review
+                </a>
+
+                <a class="navigation-link" href="../self-assessment.html">
+                    Self Assessment
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- #endregion -->
+
+
+    <main class="site-shell">
+
+
+        <!--================================================
+            Project Introduction
+
+            Main information used to introduce the
+            Mobile Inventory App artifact.
+        ================================================-->
+
+        <!-- #region PROJECT INTRODUCTION -->
+
+        <section class="project-page">
+
+            <div class="project-page-header">
+
+                <p class="system-label">
+                    Artifact 03 / Databases
+                </p>
+
+                <h1>
+                    Mobile Inventory App
+                </h1>
+
+                <p class="project-page-summary">
+                    An Android inventory management application enhanced with
+                    a normalized SQLite database, stronger account security,
+                    improved inventory details, lookup tables, and inventory
+                    history tracking.
+                </p>
+
+            </div>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Project Overview
+
+                Quick reference information about the
+                original project and enhancement focus.
+            ================================================-->
+
+            <!-- #region PROJECT OVERVIEW -->
+
+            <div class="project-overview-grid">
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Category
+                    </span>
+
+                    <span class="profile-value">
+                        Databases
+                    </span>
+
+                </div>
+
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Original Course
+                    </span>
+
+                    <span class="profile-value">
+                        CS-360 Mobile Architecture and Programming
+                    </span>
+
+                </div>
+
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Technologies
+                    </span>
+
+                    <span class="profile-value">
+                        Java, Android, SQLite
+                    </span>
+
+                </div>
+
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Enhancement Focus
+                    </span>
+
+                    <span class="profile-value">
+                        Database Design, Security, and Inventory Management
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Project Resources
+
+                Direct links to the original artifact and the
+                enhanced version completed for the capstone.
+            ================================================-->
+
+            <!-- #region PROJECT RESOURCES -->
+
+            <div class="project-resource-links">
+
+                <a class="primary-button" href="https://github.com/DustinDavis-04/cs499-mobile-inventory-enhancement"
+                    target="_blank" rel="noopener noreferrer">
+                    Enhanced Repository
+                </a>
+
+                <a class="primary-button"
+                    href="https://github.com/DustinDavis-04/cs499-mobile-inventory-enhancement/tree/v1.0-original"
+                    target="_blank" rel="noopener noreferrer">
+                    Original Version
+                </a>
+
+            </div>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Original Artifact
+
+                This section will describe the original
+                Mobile Inventory App before enhancement.
+            ================================================-->
+
+            <!-- #region ORIGINAL ARTIFACT -->
+
+            <section class="project-content-section">
+
+                <p class="system-label">
+                    Artifact Overview
+                </p>
+
+                <h2>
+                    Original Project
+                </h2>
+
+                <div class="project-content-panel">
+
+                    <p>
+                        The Mobile Inventory App was originally created in CS-360 Mobile
+                        Architecture and Programming. It is an Android application that uses
+                        SQLite to store inventory and user information.
+                    </p>
+
+                    <p>
+                        The original application allowed users to log in, create inventory
+                        items, edit inventory, and receive SMS notifications when inventory
+                        became low. Because I built the application from the ground up, I
+                        already understood how the different parts worked together before
+                        beginning the capstone enhancement.
+                    </p>
+
+                    <p>
+                        I selected this artifact for the Databases category because it gave
+                        me the opportunity to demonstrate database development while also
+                        showing a different side of my software development experience. My
+                        other artifacts focused on web applications, while this project let
+                        me include Android development and show that I can work across
+                        multiple platforms.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Enhancement
+
+                This section will explain the improvements
+                made to the artifact during the capstone.
+            ================================================-->
+
+            <!-- #region ENHANCEMENT -->
+
+            <section class="project-content-section">
+
+                <p class="system-label">
+                    Enhancement
+                </p>
+
+                <h2>
+                    What I Improved
+                </h2>
+
+                <div class="project-content-panel">
+
+                    <p>
+                        The biggest improvement I made was redesigning the database into a
+                        normalized relational structure. Instead of storing everything in a
+                        single inventory table, I separated manufacturers, categories,
+                        warehouse locations, users, inventory items, and transaction history
+                        into their own related tables.
+                    </p>
+
+                    <p>
+                        This reduced duplicated data, improved organization, and made the
+                        application easier to maintain as it grows. I also added foreign key
+                        relationships so the different parts of the database could work
+                        together in a more structured way.
+                    </p>
+
+                    <p>
+                        I expanded the application by adding inventory history, soft deletion
+                        with item restoration, warehouse location tracking, and automatic
+                        loading of a realistic inventory dataset from a bundled CSV file
+                        during the initial database setup. The application now starts with a
+                        populated warehouse instead of requiring every item to be entered
+                        manually.
+                    </p>
+
+                    <p>
+                        Security was another major improvement. The original application
+                        stored passwords in plain text, so I replaced that approach with
+                        PBKDF2 password hashing and unique salts for each user account. I also
+                        added automatic password migration so existing accounts are upgraded
+                        after a successful login, while new accounts are stored securely from
+                        the beginning.
+                    </p>
+
+                    <p>
+                        I also updated the login process so usernames are no longer case
+                        sensitive while passwords remain case sensitive. This improved the
+                        user experience without weakening account security.
+                    </p>
+
+                    <p>
+                        Finally, I restored and improved the low inventory notification
+                        workflow after redesigning the inventory management screens. The
+                        application now records transaction history, updates the Warehouse
+                        Chat notification system, and attempts to send SMS alerts when an
+                        item transitions into a low inventory state.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Enhancement Narrative
+
+                Final reflection describing the enhancement
+                process, challenges, and skills demonstrated.
+            ================================================-->
+
+            <!-- #region ENHANCEMENT NARRATIVE -->
+
+            <section class="project-content-section">
+
+                <p class="system-label">
+                    Reflection
+                </p>
+
+                <h2>
+                    Enhancement Narrative
+                </h2>
+
+                <div class="project-content-panel">
+
+                    <h3>
+                        Why I Selected This Artifact
+                    </h3>
+
+                    <p>
+                        I selected the Mobile Inventory App because it demonstrates my
+                        database development skills while also showing a different side of
+                        my software development experience. My other artifacts focused on
+                        web applications, while this project allowed me to include Android
+                        development and show that I can work across multiple platforms.
+                    </p>
+
+                    <p>
+                        I also chose this artifact because it was one of my favorite projects
+                        during the Computer Science program. I built the application from the
+                        ground up, so I already understood how it worked. That made it a good
+                        candidate for enhancement because I could focus on improving the
+                        database design, security, and overall functionality instead of
+                        learning an unfamiliar code base.
+                    </p>
+
+
+                    <h3>
+                        Enhancement Process
+                    </h3>
+
+                    <p>
+                        The biggest improvement I made was redesigning the database into a
+                        normalized relational structure. Manufacturers, categories,
+                        warehouse locations, users, inventory items, and transaction history
+                        were separated into related tables instead of keeping the information
+                        together in a single inventory table.
+                    </p>
+
+                    <p>
+                        I also expanded the application by adding inventory history, soft
+                        deletion with item restoration, warehouse location tracking, and
+                        automatic loading of a realistic inventory dataset from a bundled
+                        CSV file during the initial database setup. This allowed the
+                        application to start with a populated warehouse instead of requiring
+                        every item to be entered manually.
+                    </p>
+
+                    <p>
+                        Security was another major part of the enhancement. I replaced
+                        plaintext password storage with PBKDF2 password hashing and unique
+                        salts for each account. I also added automatic password migration so
+                        existing accounts are upgraded after a successful login, while new
+                        accounts are stored securely from the beginning.
+                    </p>
+
+                    <p>
+                        I updated the login process so usernames are no longer case
+                        sensitive while passwords remain case sensitive. I also restored and
+                        improved the low inventory notification workflow after redesigning
+                        the inventory management screens. The application now records
+                        transaction history, updates the Warehouse Chat notification system,
+                        and attempts to send SMS alerts when an item transitions into a low
+                        inventory state.
+                    </p>
+
+
+                    <h3>
+                        Reflection
+                    </h3>
+
+                    <p>
+                        Working through this enhancement taught me much more about database
+                        design than simply creating tables and storing data. I learned how
+                        normalization improves data integrity, reduces duplication, and makes
+                        an application easier to expand in the future.
+                    </p>
+
+                    <p>
+                        I also gained a better understanding of how changes to the database
+                        affect the rest of the application. Updating the schema required
+                        changes throughout the user interface and application logic, which
+                        reinforced how closely connected the database is to the rest of the
+                        application.
+                    </p>
+
+                    <p>
+                        One of the biggest challenges was redesigning the database while
+                        keeping the application working correctly. As the database became
+                        more advanced, features such as inventory history, item restoration,
+                        user authentication, and notifications all had to work together with
+                        the new structure.
+                    </p>
+
+                    <p>
+                        Another challenge was restoring the SMS notification system after
+                        redesigning the inventory screen. Moving the quantity adjustment
+                        process into a different activity required tracing where the original
+                        alert logic existed and integrating it into the new workflow without
+                        creating duplicate alerts.
+                    </p>
+
+                    <p>
+                        This enhancement also gave me more experience improving an existing
+                        project instead of simply starting over. I built on the original
+                        application by improving its database design, security, and overall
+                        functionality while maintaining the existing user experience.
+                    </p>
+
+                    <p>
+                        Overall, this artifact demonstrates how much my database knowledge
+                        has grown since completing the original project. The application now
+                        reflects a more realistic database design, stronger security
+                        practices, improved inventory management, and a more polished user
+                        experience while still building on the foundation of the original
+                        assignment.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+        </section>
+
+    </main>
+
+
+    <!--================================================
+        JavaScript
+
+        Shared site functionality is loaded here.
+    ================================================-->
+
+    <!-- #region JAVASCRIPT -->
+
+    <script src="../assets/js/main.js"></script>
+
+    <!-- #endregion -->
+
+
+</body>
+
+</html>

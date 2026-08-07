@@ -1,0 +1,373 @@
+/*================================================
+    Home Page Introduction
+
+    This section introduces who I am before
+    directing visitors into the project archive.
+================================================*/
+
+/* #region HOME PAGE INTRODUCTION */
+
+.hero-section {
+    max-width: 850px;
+}
+
+
+/* Keep the professional roles visible without competing with the name */
+.hero-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 18px;
+
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+
+
+/* Keep the main action buttons together below the introduction */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-top: 36px;
+}
+
+
+/* Shared button styling keeps both actions consistent */
+.primary-button,
+.secondary-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 24px;
+
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        background 200ms ease,
+        color 200ms ease,
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+
+/* The primary action gets the stronger visual treatment */
+.primary-button {
+    background: var(--accent);
+    color: #1f252b;
+}
+
+
+/* The secondary action stays quieter until it is selected */
+.secondary-button {
+    background: transparent;
+    color: var(--text);
+}
+
+
+/* Lift the buttons slightly so the interaction feels responsive */
+.primary-button:hover,
+.primary-button:focus-visible,
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(34, 211, 238, 0.3);
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    background: rgba(34, 211, 238, 0.08);
+}
+
+
+/* Stack the actions on narrow screens so they stay easy to select */
+@media (max-width: 600px) {
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+}
+
+/* #endregion */
+
+/*================================================
+    Operator Profile
+
+    This section gives visitors a quick overview
+    of my background, experience, and current goals.
+================================================*/
+
+/* #region OPERATOR PROFILE */
+
+.profile-section {
+    padding: 110px 0;
+}
+
+
+/* Keep section headings consistent throughout the portfolio */
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    margin-top: 14px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+
+/* Split the profile into a summary and quick reference details */
+.profile-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 42px;
+}
+
+
+/* Keep the profile paragraphs readable without stretching too wide */
+.profile-summary {
+    max-width: 720px;
+}
+
+.profile-summary p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.profile-summary p + p {
+    margin-top: 18px;
+}
+
+
+/* Display key profile details in a clean console-style panel */
+.profile-details {
+    padding: 28px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    background: rgba(42, 47, 56, 0.78);
+}
+
+
+/* Separate each detail without making the panel feel crowded */
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 18px 0;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.profile-item:first-child {
+    padding-top: 0;
+}
+
+.profile-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+
+/* Use the label as a small console heading */
+.profile-label {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.profile-value {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+
+/* Stack the profile sections when there is not enough horizontal space */
+@media (max-width: 850px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* #endregion */
+
+/*================================================
+    Project Archive
+
+    These cards provide a quick overview of the
+    three projects included in the final portfolio.
+================================================*/
+
+/* #region PROJECT ARCHIVE */
+
+.projects-section {
+    padding: 110px 0;
+}
+
+
+/* Add a little supporting text below the section heading */
+.section-description {
+    max-width: 720px;
+    margin-top: 18px;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* Keep all three projects evenly spaced across larger screens */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* Make the full project card clickable */
+.project-card-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Each project is treated like its own archive entry */
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 370px;
+    height: 100%;
+    padding: 28px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    background: rgba(42, 47, 56, 0.82);
+
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+
+/* Give the card a small response when someone moves over it */
+.project-card-link:hover .project-card,
+.project-card-link:focus-visible .project-card {
+    border-color: var(--accent);
+    box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
+    transform: translateY(-4px);
+}
+
+
+/* Number and category work like archive metadata */
+.project-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 26px;
+}
+
+.project-number {
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-category {
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* Keep project titles easy to find while scanning the page */
+.project-card h3 {
+    margin-bottom: 18px;
+
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+
+/* Let the description take the available space so the action stays aligned */
+.project-card p {
+    flex-grow: 1;
+
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+
+/* Keep the action hidden until someone interacts with the card */
+.project-card-action {
+    margin-top: 28px;
+
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+
+    opacity: 0;
+    transform: translateY(6px);
+
+    transition:
+        opacity 200ms ease,
+        transform 200ms ease;
+}
+
+
+/* Reveal the action when the card is hovered or selected with the keyboard */
+.project-card-link:hover .project-card-action,
+.project-card-link:focus-visible .project-card-action {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Drop to one column when the cards no longer have enough room */
+@media (max-width: 900px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
+}
+
+/* #endregion */

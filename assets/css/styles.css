@@ -14,6 +14,8 @@
     it easier to adjust the full site later.
 ================================================*/
 
+/* #region THEME COLORS */
+
 :root {
     --background: #32353a;
     --panel: #161b22;
@@ -27,6 +29,7 @@
     --muted: #94a3b8;
 }
 
+/* #endregion */
 
 /*================================================
     Browser Reset
@@ -35,12 +38,15 @@
     starts from the same baseline in each browser.
 ================================================*/
 
+/* #region BROWSER RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* #endregion */
 
 /*================================================
     Base Page Styling
@@ -48,6 +54,8 @@
     This sets the main background, text color,
     and default font used throughout the site.
 ================================================*/
+
+/* #region BASE PAGE STYLING */
 
 body {
     min-height: 100vh;
@@ -65,6 +73,7 @@ body {
     line-height: 1.6;
 }
 
+/* #endregion */
 
 /*================================================
     Main Page Container
@@ -73,12 +82,15 @@ body {
     prevents it from stretching too wide.
 ================================================*/
 
+/* #region MAIN PAGE CONTAINER */
+
 .site-shell {
     width: min(1100px, calc(100% - 48px));
     margin: 0 auto;
     padding: 100px 0;
 }
 
+/* #endregion */
 
 /*================================================
     Project Archive Label
@@ -86,6 +98,8 @@ body {
     This small label introduces the visual theme
     before the main heading.
 ================================================*/
+
+/* #region PROJECT ARCHIVE LABEL */
 
 .system-label {
     color: var(--accent);
@@ -95,6 +109,7 @@ body {
     text-transform: uppercase;
 }
 
+/* #endregion */
 
 /*================================================
     Main Heading
@@ -103,12 +118,15 @@ body {
     be used as the main introduction for the site.
 ================================================*/
 
+/* #region MAIN HEADING */
+
 h1 {
     margin-top: 15px;
     font-size: 4rem;
     line-height: 1.1;
 }
 
+/* #endregion */
 
 /*================================================
     Introductory Text
@@ -117,6 +135,8 @@ h1 {
     without competing with the main heading.
 ================================================*/
 
+/* #region INTRODUCTORY TEXT */
+
 .intro-text {
     max-width: 700px;
     margin-top: 25px;
@@ -124,6 +144,7 @@ h1 {
     line-height: 1.8;
 }
 
+/* #endregion */
 
 /*================================================
     Site Header
@@ -131,6 +152,8 @@ h1 {
     The header stays simple so visitors can quickly
     find the main sections of the portfolio.
 ================================================*/
+
+/* #region SITE HEADER */
 
 .site-header {
     width: 100%;
@@ -278,6 +301,7 @@ h1 {
     opacity: 1;
 }
 
+/* #endregion */
 
 /*================================================
     Small Screen Navigation
@@ -285,6 +309,8 @@ h1 {
     Allow the header to wrap instead of letting
     the links run outside the screen.
 ================================================*/
+
+/* #region SMALL SCREEN NAVIGATION */
 
 @media (max-width: 800px) {
 
@@ -314,450 +340,4 @@ h1 {
 
 }
 
-
-/*================================================
-    Home Page Introduction
-
-    This section introduces who I am before
-    directing visitors into the project archive.
-================================================*/
-
-.hero-section {
-    max-width: 850px;
-}
-
-
-/* Keep the professional roles visible without competing with the name */
-.hero-roles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    margin-top: 18px;
-
-    color: var(--primary);
-    font-size: 1.15rem;
-    font-weight: bold;
-    letter-spacing: 0.05rem;
-}
-
-
-/* Keep the main action buttons together below the introduction */
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-
-    margin-top: 36px;
-}
-
-
-/* Shared button styling keeps both actions consistent */
-.primary-button,
-.secondary-button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 48px;
-    padding: 0 24px;
-
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-
-    font-size: 0.82rem;
-    font-weight: bold;
-    letter-spacing: 0.08rem;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    transition:
-        background 200ms ease,
-        color 200ms ease,
-        box-shadow 200ms ease,
-        transform 200ms ease;
-}
-
-
-/* The primary action gets the stronger visual treatment */
-.primary-button {
-    background: var(--accent);
-    color: #1f252b;
-}
-
-
-/* The secondary action stays quieter until it is selected */
-.secondary-button {
-    background: transparent;
-    color: var(--text);
-}
-
-
-/* Lift the buttons slightly so the interaction feels responsive */
-.primary-button:hover,
-.primary-button:focus-visible,
-.secondary-button:hover,
-.secondary-button:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 0 14px rgba(34, 211, 238, 0.3);
-}
-
-.secondary-button:hover,
-.secondary-button:focus-visible {
-    background: rgba(34, 211, 238, 0.08);
-}
-
-
-/* Stack the actions on narrow screens so they stay easy to select */
-@media (max-width: 600px) {
-
-    .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .primary-button,
-    .secondary-button {
-        width: 100%;
-    }
-
-}
-
-
-/*================================================
-    Operator Profile
-
-    This section gives visitors a quick overview
-    of my background, experience, and current goals.
-================================================*/
-
-.profile-section {
-    padding: 110px 0;
-}
-
-
-/* Keep section headings consistent throughout the portfolio */
-.section-heading {
-    max-width: 760px;
-    margin-bottom: 42px;
-}
-
-.section-heading h2 {
-    margin-top: 14px;
-
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
-}
-
-
-/* Split the profile into a summary and quick reference details */
-.profile-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-    gap: 42px;
-}
-
-
-/* Keep the profile paragraphs readable without stretching too wide */
-.profile-summary {
-    max-width: 720px;
-}
-
-.profile-summary p {
-    color: var(--muted);
-    line-height: 1.8;
-}
-
-.profile-summary p + p {
-    margin-top: 18px;
-}
-
-
-/* Display key profile details in a clean console-style panel */
-.profile-details {
-    padding: 28px;
-
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.78);
-}
-
-
-/* Separate each detail without making the panel feel crowded */
-.profile-item {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    padding: 18px 0;
-    border-bottom: 1px solid var(--panel-border);
-}
-
-.profile-item:first-child {
-    padding-top: 0;
-}
-
-.profile-item:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
-}
-
-
-/* Use the label as a small console heading */
-.profile-label {
-    color: var(--accent);
-    font-size: 0.72rem;
-    font-weight: bold;
-    letter-spacing: 0.12rem;
-    text-transform: uppercase;
-}
-
-.profile-value {
-    color: var(--text);
-    font-size: 1rem;
-}
-
-
-/* Stack the profile sections when there is not enough horizontal space */
-@media (max-width: 850px) {
-
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/*================================================
-    Project Archive
-
-    These cards provide a quick overview of the
-    three projects included in the final portfolio.
-================================================*/
-
-.projects-section {
-    padding: 110px 0;
-}
-
-
-/* Add a little supporting text below the section heading */
-.section-description {
-    max-width: 720px;
-    margin-top: 18px;
-
-    color: var(--muted);
-    line-height: 1.8;
-}
-
-
-/* Keep all three projects evenly spaced across larger screens */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-}
-
-
-/* Each project is treated like its own archive entry */
-.project-card {
-    display: flex;
-    flex-direction: column;
-
-    min-height: 370px;
-    padding: 28px;
-
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.82);
-
-    transition:
-        border-color 200ms ease,
-        box-shadow 200ms ease,
-        transform 200ms ease;
-}
-
-
-/* Give the card a small response when someone moves over it */
-.project-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
-    transform: translateY(-4px);
-}
-
-
-/* Number and category work like archive metadata */
-.project-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-
-    margin-bottom: 26px;
-}
-
-.project-number {
-    color: var(--accent);
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.project-category {
-    color: var(--muted);
-    font-size: 0.68rem;
-    font-weight: bold;
-    letter-spacing: 0.08rem;
-    text-align: right;
-    text-transform: uppercase;
-}
-
-
-/* Keep project titles easy to find while scanning the page */
-.project-card h3 {
-    margin-bottom: 18px;
-
-    color: var(--text);
-    font-size: 1.5rem;
-}
-
-
-/* Let the description take the available space so links stay aligned */
-.project-card p {
-    flex-grow: 1;
-
-    color: var(--muted);
-    line-height: 1.75;
-}
-
-
-/* Simple circuit-style link at the bottom of each card */
-.project-link {
-    position: relative;
-
-    align-self: flex-start;
-
-    margin-top: 28px;
-    padding-bottom: 7px;
-
-    color: var(--accent);
-    font-size: 0.78rem;
-    font-weight: bold;
-    letter-spacing: 0.08rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-/* Reuse the circuit line idea from the navigation */
-.project-link::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    height: 2px;
-
-    background: var(--accent);
-    box-shadow: 0 0 8px rgba(34, 211, 238, 0.45);
-
-    content: "";
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 200ms ease;
-}
-
-.project-link:hover::after,
-.project-link:focus-visible::after {
-    transform: scaleX(1);
-}
-
-
-/* Drop to one column when the cards no longer have enough room */
-@media (max-width: 900px) {
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card {
-        min-height: auto;
-    }
-
-}
-
-
-/*================================================
-    Professional Self Assessment
-
-    This page provides space for the full reflection
-    without making the home page too crowded.
-================================================*/
-
-.assessment-section {
-    padding: 40px 0 110px;
-}
-
-
-/* Keep the assessment comfortable to read on larger screens */
-.assessment-content {
-    max-width: 850px;
-    margin-top: 48px;
-    padding: 36px;
-
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.82);
-}
-
-.assessment-content p {
-    color: var(--muted);
-    line-height: 1.9;
-}
-
-
-/* Reduce the panel spacing on smaller screens */
-@media (max-width: 600px) {
-
-    .assessment-content {
-        padding: 24px;
-    }
-
-}
-
-
-/*================================================
-    Code Review
-
-    This page will contain the capstone code review
-    and supporting information for the three artifacts.
-================================================*/
-
-.code-review-section {
-    padding: 40px 0 110px;
-}
-
-
-/* Reserve a clear area for the final code review video */
-.code-review-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 360px;
-    max-width: 900px;
-    margin-top: 48px;
-    padding: 36px;
-
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.82);
-}
-
-
-/* Temporary message until the final video is connected */
-.code-review-status {
-    color: var(--muted);
-    font-size: 0.9rem;
-    letter-spacing: 0.04rem;
-    text-align: center;
-}
+/* #endregion */

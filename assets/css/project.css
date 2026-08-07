@@ -1,0 +1,186 @@
+/*================================================
+    Individual Project Pages
+
+    These styles are shared by all three project
+    pages so the artifacts use the same layout.
+================================================*/
+
+/* #region INDIVIDUAL PROJECT PAGES */
+
+.project-page {
+    padding: 40px 0 110px;
+}
+
+
+/* Give the project introduction enough room without stretching too wide */
+.project-page-header {
+    max-width: 850px;
+}
+
+.project-page-summary {
+    max-width: 760px;
+    margin-top: 22px;
+
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* Display the main project details in a compact information grid */
+.project-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+
+    margin-top: 48px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--panel-border);
+}
+
+.project-overview-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    min-height: 120px;
+    padding: 22px;
+
+    background: rgba(42, 47, 56, 0.94);
+}
+
+
+/* Separate the main parts of each artifact page */
+.project-content-section {
+    margin-top: 80px;
+}
+
+.project-content-section h2 {
+    margin-top: 12px;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+
+/* Main reading panel used for artifact details and narratives */
+.project-content-panel {
+    max-width: 900px;
+    margin-top: 28px;
+    padding: 32px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    background: rgba(42, 47, 56, 0.82);
+}
+
+.project-content-panel p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* Give longer project descriptions some extra space */
+.project-content-panel p + p {
+    margin-top: 18px;
+}
+
+
+/* Reduce the project information grid as the screen gets smaller */
+@media (max-width: 900px) {
+
+    .project-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content-panel {
+        padding: 24px;
+    }
+
+}
+
+
+/* Separate narrative topics without breaking the flow of the page */
+.project-content-panel h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.project-content-panel h3:first-child {
+    margin-top: 0;
+}
+
+
+/* Keep project resources easy to find without crowding the overview */
+.project-resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-top: 28px;
+}
+
+
+/* Make repository links stand out against the project page background */
+.project-resource-links .primary-button {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    background: var(--accent);
+    color: #1f252b;
+
+    border: 1px solid #8be9f5;
+
+    box-shadow:
+        0 0 8px rgba(34, 211, 238, 0.35),
+        0 0 16px rgba(34, 211, 238, 0.18);
+}
+
+
+/* Give the repository button a stronger response when hovered */
+.project-resource-links .primary-button:hover,
+.project-resource-links .primary-button:focus-visible {
+    background: #67e8f9;
+
+    box-shadow:
+        0 0 10px rgba(103, 232, 249, 0.55),
+        0 0 20px rgba(34, 211, 238, 0.28);
+}
+
+
+/* Keep the original artifact link visible against the project background */
+.project-resource-links .secondary-button {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    border-color: var(--accent);
+    color: var(--text);
+
+    background: rgba(34, 211, 238, 0.08);
+}
+
+
+/* Give the original artifact link the same responsive feel */
+.project-resource-links .secondary-button:hover,
+.project-resource-links .secondary-button:focus-visible {
+    background: rgba(34, 211, 238, 0.16);
+
+    box-shadow:
+        0 0 8px rgba(34, 211, 238, 0.35),
+        0 0 16px rgba(34, 211, 238, 0.18);
+}
+
+/* #endregion */

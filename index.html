@@ -8,11 +8,21 @@
     <title>Dustin Davis | Project Archive</title>
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
 <body>
 
-    <!-- Main navigation used to move through the portfolio -->
+
+    <!--================================================
+        Main Navigation
+
+        Shared navigation used to move through the
+        main sections of the portfolio.
+    ================================================-->
+
+    <!-- #region MAIN NAVIGATION -->
+
     <header class="site-header">
         <div class="header-content">
 
@@ -23,22 +33,48 @@
 
             <!-- Primary links for the main portfolio sections -->
             <nav class="main-navigation" aria-label="Main navigation">
-                <a class="navigation-link active" href="index.html">Home</a>
-                <a class="navigation-link" href="#profile">Profile</a>
-                <a class="navigation-link" href="#projects">Projects</a>
-                <a class="navigation-link" href="code-review.html">Code Review</a>
+
+                <a class="navigation-link active" href="index.html">
+                    Home
+                </a>
+
+                <a class="navigation-link" href="#profile">
+                    Profile
+                </a>
+
+                <a class="navigation-link" href="#projects">
+                    Projects
+                </a>
+
+                <a class="navigation-link" href="code-review.html">
+                    Code Review
+                </a>
+
                 <a class="navigation-link" href="self-assessment.html">
                     Self Assessment
                 </a>
+
             </nav>
 
         </div>
     </header>
 
+    <!-- #endregion -->
+
+
     <!-- Main content for the home page -->
     <main class="site-shell">
 
-        <!-- Main introduction shown when someone first opens the portfolio -->
+
+        <!--================================================
+            Home Page Introduction
+
+            This section introduces who I am before
+            directing visitors into the project archive.
+        ================================================-->
+
+        <!-- #region HOME PAGE INTRODUCTION -->
+
         <section class="hero-section">
 
             <p class="system-label">
@@ -61,8 +97,9 @@
                 cloud and systems technologies.
             </p>
 
-            <!-- These buttons will connect to the main portfolio sections -->
+            <!-- These buttons connect to the main portfolio sections -->
             <div class="hero-actions">
+
                 <a class="primary-button" href="#projects">
                     View Projects
                 </a>
@@ -70,14 +107,27 @@
                 <a class="secondary-button" href="self-assessment.html">
                     Professional Self Assessment
                 </a>
+
             </div>
 
         </section>
 
-        <!-- Short professional profile that explains my background and current direction -->
+        <!-- #endregion -->
+
+
+        <!--================================================
+            Operator Profile
+
+            This section gives visitors a quick overview
+            of my background, experience, and current goals.
+        ================================================-->
+
+        <!-- #region OPERATOR PROFILE -->
+
         <section class="profile-section" id="profile">
 
             <div class="section-heading">
+
                 <p class="system-label">
                     Operator Profile
                 </p>
@@ -85,55 +135,79 @@
                 <h2>
                     Building software and supporting modern infrastructure
                 </h2>
+
             </div>
+
 
             <div class="profile-grid">
 
                 <!-- Main profile summary -->
                 <div class="profile-summary">
+
                     <p>
-                        I am a Computer Science graduate with a background in software
-                        engineering and a growing focus on systems administration,
-                        cloud technologies, and enterprise infrastructure.
+                        I am a Computer Science graduate with a background in
+                        software engineering and a growing focus on systems
+                        administration, cloud technologies, and enterprise
+                        infrastructure.
                     </p>
 
                     <p>
                         My experience includes full-stack development, Android
-                        development, database design, Python-based data processing,
-                        and supporting Microsoft and virtualized environments.
+                        development, database design, Python-based data
+                        processing, and supporting Microsoft and virtualized
+                        environments.
                     </p>
 
                     <p>
-                        This portfolio shows how I have applied those skills across
-                        software engineering, algorithms and data structures, and
-                        database development.
+                        This portfolio shows how I have applied those skills
+                        across software engineering, algorithms and data
+                        structures, and database development.
                     </p>
+
                 </div>
+
 
                 <!-- Quick details make the profile easier to scan -->
                 <div class="profile-details">
 
                     <div class="profile-item">
-                        <span class="profile-label">Current Role</span>
-                        <span class="profile-value">Systems Administrator</span>
+                        <span class="profile-label">
+                            Current Role
+                        </span>
+
+                        <span class="profile-value">
+                            Systems Administrator
+                        </span>
                     </div>
 
+
                     <div class="profile-item">
-                        <span class="profile-label">Education</span>
+                        <span class="profile-label">
+                            Education
+                        </span>
+
                         <span class="profile-value">
                             Bachelor of Science in Computer Science
                         </span>
                     </div>
 
+
                     <div class="profile-item">
-                        <span class="profile-label">Primary Focus</span>
+                        <span class="profile-label">
+                            Primary Focus
+                        </span>
+
                         <span class="profile-value">
                             Software Engineering and Enterprise Systems
                         </span>
                     </div>
 
+
                     <div class="profile-item">
-                        <span class="profile-label">Current Interests</span>
+                        <span class="profile-label">
+                            Current Interests
+                        </span>
+
                         <span class="profile-value">
                             Azure, Automation, Cloud Infrastructure, and Security
                         </span>
@@ -145,10 +219,22 @@
 
         </section>
 
-        <!-- Main project collection for the three capstone artifacts -->
+        <!-- #endregion -->
+
+
+        <!--================================================
+            Project Archive
+
+            These cards provide a quick overview of the
+            three projects included in the final portfolio.
+        ================================================-->
+
+        <!-- #region PROJECT ARCHIVE -->
+
         <section class="projects-section" id="projects">
 
             <div class="section-heading">
+
                 <p class="system-label">
                     Project Archive
                 </p>
@@ -158,93 +244,150 @@
                 </h2>
 
                 <p class="section-description">
-                    These projects represent different areas of computer science and
-                    show how I improved existing work through planning, testing, and
-                    targeted enhancements.
+                    These projects represent different areas of computer
+                    science and show how I improved existing work through
+                    planning, testing, and targeted enhancements.
                 </p>
+
             </div>
+
 
             <div class="project-grid">
 
+
                 <!-- Artifact One -->
-                <article class="project-card">
+                <a class="project-card-link" href="projects/travlr.html">
 
-                    <div class="project-card-header">
-                        <span class="project-number">01</span>
-                        <span class="project-category">Software Engineering</span>
-                    </div>
+                    <article class="project-card">
 
-                    <h3>Travlr Getaways</h3>
+                        <div class="project-card-header">
 
-                    <p>
-                        A full-stack travel application that uses Angular, Express,
-                        Node.js, and MongoDB. I enhanced the project by improving
-                        validation, API security, error handling, and the
-                        administration interface.
-                    </p>
+                            <span class="project-number">
+                                01
+                            </span>
 
-                    <a class="project-link" href="projects/travlr.html">
-                        View Project
-                    </a>
+                            <span class="project-category">
+                                Software Engineering
+                            </span>
 
-                </article>
+                        </div>
+
+                        <h3>
+                            Travlr Getaways
+                        </h3>
+
+                        <p>
+                            A full-stack travel application that uses Angular,
+                            Express, Node.js, and MongoDB. I enhanced the project
+                            by improving validation, API security, error handling,
+                            and the administration interface.
+                        </p>
+
+                        <span class="project-card-action">
+                            View Project
+                        </span>
+
+                    </article>
+
+                </a>
 
 
                 <!-- Artifact Two -->
-                <article class="project-card">
+                <a class="project-card-link" href="projects/grazioso.html">
 
-                    <div class="project-card-header">
-                        <span class="project-number">02</span>
-                        <span class="project-category">
-                            Algorithms &amp; Data Structures
+                    <article class="project-card">
+
+                        <div class="project-card-header">
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                            <span class="project-category">
+                                Algorithms &amp; Data Structures
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Grazioso Salvare
+                        </h3>
+
+                        <p>
+                            A Python-based animal rescue dashboard using real
+                            shelter records. I enhanced the project with data
+                            preparation, intake-to-outcome matching, rescue
+                            suitability scoring, ranking, and improved location
+                            handling.
+                        </p>
+
+                        <span class="project-card-action">
+                            View Project
                         </span>
-                    </div>
 
-                    <h3>Grazioso Salvare</h3>
+                    </article>
 
-                    <p>
-                        A Python-based animal rescue dashboard using real shelter
-                        records. I enhanced the project with data preparation,
-                        intake-to-outcome matching, rescue suitability scoring,
-                        ranking, and improved location handling.
-                    </p>
-
-                    <a class="project-link" href="projects/grazioso.html">
-                        View Project
-                    </a>
-
-                </article>
+                </a>
 
 
                 <!-- Artifact Three -->
-                <article class="project-card">
+                <a class="project-card-link" href="projects/mobile.html">
 
-                    <div class="project-card-header">
-                        <span class="project-number">03</span>
-                        <span class="project-category">Databases</span>
-                    </div>
+                    <article class="project-card">
 
-                    <h3>Mobile Inventory App</h3>
+                        <div class="project-card-header">
 
-                    <p>
-                        An Android inventory management application built with Java
-                        and SQLite. I enhanced the database design, inventory details,
-                        lookup tables, account security, and inventory history.
-                    </p>
+                            <span class="project-number">
+                                03
+                            </span>
 
-                    <a class="project-link" href="projects/mobile.html">
-                        View Project
-                    </a>
+                            <span class="project-category">
+                                Databases
+                            </span>
 
-                </article>
+                        </div>
+
+                        <h3>
+                            Mobile Inventory App
+                        </h3>
+
+                        <p>
+                            An Android inventory management application built with
+                            Java and SQLite. I enhanced the database design,
+                            inventory details, lookup tables, account security,
+                            and inventory history.
+                        </p>
+
+                        <span class="project-card-action">
+                            View Project
+                        </span>
+
+                    </article>
+
+                </a>
 
             </div>
 
         </section>
 
+        <!-- #endregion -->
+
+
     </main>
 
+
+    <!--================================================
+        JavaScript
+
+        Shared site functionality is loaded here.
+    ================================================-->
+
+    <!-- #region JAVASCRIPT -->
+
     <script src="assets/js/main.js"></script>
+
+    <!-- #endregion -->
+
 
 </body>
 

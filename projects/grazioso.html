@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grazioso Salvare | Dustin Davis</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+
+<body>
+
+
+    <!--================================================
+        Main Navigation
+
+        Shared navigation used across the portfolio.
+    ================================================-->
+
+    <!-- #region MAIN NAVIGATION -->
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <!-- Small site name that stays visible across every page -->
+            <a class="site-brand" href="../index.html">
+                Dustin Davis
+            </a>
+
+            <!-- Primary links for the main portfolio sections -->
+            <nav class="main-navigation" aria-label="Main navigation">
+
+                <a class="navigation-link" href="../index.html">
+                    Home
+                </a>
+
+                <a class="navigation-link" href="../index.html#profile">
+                    Profile
+                </a>
+
+                <a class="navigation-link active" href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a class="navigation-link" href="../code-review.html">
+                    Code Review
+                </a>
+
+                <a class="navigation-link" href="../self-assessment.html">
+                    Self Assessment
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- #endregion -->
+
+
+    <main class="site-shell">
+
+
+        <!--================================================
+            Project Introduction
+
+            Main information used to introduce the
+            Grazioso Salvare artifact.
+        ================================================-->
+
+        <!-- #region PROJECT INTRODUCTION -->
+
+        <section class="project-page">
+
+            <div class="project-page-header">
+
+                <p class="system-label">
+                    Artifact 02 / Algorithms &amp; Data Structures
+                </p>
+
+                <h1>
+                    Grazioso Salvare
+                </h1>
+
+                <p class="project-page-summary">
+                    A Python-based animal rescue dashboard enhanced with
+                    structured data preparation, temporal intake-to-outcome
+                    matching, rescue suitability scoring, ranking, and
+                    improved location handling.
+                </p>
+
+            </div>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Project Overview
+
+                Quick reference information about the
+                original project and enhancement focus.
+            ================================================-->
+
+            <!-- #region PROJECT OVERVIEW -->
+
+            <div class="project-overview-grid">
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Category
+                    </span>
+
+                    <span class="profile-value">
+                        Algorithms &amp; Data Structures
+                    </span>
+
+                </div>
+
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Original Course
+                    </span>
+
+                    <span class="profile-value">
+                        CS-340 Client/Server Development
+                    </span>
+
+                </div>
+
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Technologies
+                    </span>
+
+                    <span class="profile-value">
+                        Python, Pandas, Dash
+                    </span>
+
+                </div>
+
+
+                <div class="project-overview-item">
+
+                    <span class="profile-label">
+                        Enhancement Focus
+                    </span>
+
+                    <span class="profile-value">
+                        Matching, Scoring, Ranking, and Data Processing
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Project Resources
+
+                Direct links to the original artifact and the
+                enhanced version completed for the capstone.
+            ================================================-->
+
+            <!-- #region PROJECT RESOURCES -->
+
+            <div class="project-resource-links">
+
+                <a class="primary-button" href="https://github.com/DustinDavis-04/cs499-grazioso-enhancement"
+                    target="_blank" rel="noopener noreferrer">
+                    Enhanced Repository
+                </a>
+
+                <a class="primary-button"
+                    href="https://github.com/DustinDavis-04/cs499-grazioso-enhancement/tree/v1.0-original"
+                    target="_blank" rel="noopener noreferrer">
+                    Original Version
+                </a>
+
+            </div>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Original Artifact
+
+                This section will describe the original
+                Grazioso Salvare project before enhancement.
+            ================================================-->
+
+            <!-- #region ORIGINAL ARTIFACT -->
+
+            <section class="project-content-section">
+
+                <p class="system-label">
+                    Artifact Overview
+                </p>
+
+                <h2>
+                    Original Project
+                </h2>
+
+                <div class="project-content-panel">
+
+                    <p>
+                        The Grazioso Salvare Animal Shelter Dashboard was originally created
+                        in CS-340 Client/Server Development. The original project used a
+                        MongoDB database with a Dash dashboard that allowed users to search
+                        and filter animal records from the Austin Animal Center dataset.
+                    </p>
+
+                    <p>
+                        Users could choose different rescue mission types, view the matching
+                        animals in a table, and display the selected animal on a map. While
+                        the original project worked well for filtering data, most of the
+                        decisions were based on simple searches.
+                    </p>
+
+                    <p>
+                        I selected this artifact because I saw an opportunity to expand it
+                        into something that actually analyzes the data instead of only
+                        displaying it. It also gave me the chance to demonstrate algorithm
+                        design and data processing rather than focusing only on the user
+                        interface.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Enhancement
+
+                This section will explain the improvements
+                made to the artifact during the capstone.
+            ================================================-->
+
+            <!-- #region ENHANCEMENT -->
+
+            <section class="project-content-section">
+
+                <p class="system-label">
+                    Enhancement
+                </p>
+
+                <h2>
+                    What I Improved
+                </h2>
+
+                <div class="project-content-panel">
+
+                    <p>
+                        For the capstone enhancement, I added a structured data preparation
+                        process that cleans and standardizes the intake and outcome datasets
+                        before the rest of the application processes them.
+                    </p>
+
+                    <p>
+                        I then created a matching algorithm that connects intake records with
+                        the correct outcome records using the animal ID and record dates.
+                        Because some animals had multiple intake records, the algorithm had
+                        to determine which intake belonged with each outcome instead of
+                        simply matching the first record it found.
+                    </p>
+
+                    <p>
+                        After the records were matched, I created a rescue suitability
+                        scoring system that evaluates each animal for different rescue
+                        missions based on breed, age, and sex. Those scores are used to rank
+                        the animals so the dashboard can show the strongest candidates first
+                        instead of simply listing every matching record.
+                    </p>
+
+                    <p>
+                        I also reorganized the project so the data preparation, matching,
+                        scoring, and dashboard helper functions each have their own
+                        responsibilities. Additional helper functions handle tasks such as
+                        exporting data, selecting candidates, and working with missing
+                        location information. This made the project easier to read, test,
+                        maintain, and update.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+            <!--================================================
+                Enhancement Narrative
+
+                Final reflection describing the enhancement
+                process, challenges, and skills demonstrated.
+            ================================================-->
+
+            <!-- #region ENHANCEMENT NARRATIVE -->
+
+            <section class="project-content-section">
+
+                <p class="system-label">
+                    Reflection
+                </p>
+
+                <h2>
+                    Enhancement Narrative
+                </h2>
+
+                <div class="project-content-panel">
+
+                    <h3>
+                        Why I Selected This Artifact
+                    </h3>
+
+                    <p>
+                        I chose the Grazioso Salvare Animal Shelter Dashboard for my
+                        ePortfolio because it gave me the opportunity to show how I can
+                        design and improve algorithms instead of only building a user
+                        interface. The original dashboard worked well for filtering animal
+                        records, but most of the decisions were still based on simple
+                        searches.
+                    </p>
+
+                    <p>
+                        I saw an opportunity to expand the project into something that
+                        actually analyzes the data before presenting it to the user. That
+                        made it a strong fit for the Algorithms and Data Structures category
+                        and gave me a way to demonstrate data preparation, record matching,
+                        scoring, ranking, and more structured decision making.
+                    </p>
+
+
+                    <h3>
+                        Enhancement Process
+                    </h3>
+
+                    <p>
+                        I started by adding a data preparation process that cleans and
+                        standardizes the intake and outcome datasets before the rest of the
+                        application uses them. From there, I created an algorithm that
+                        matches intake records with the correct outcome records by using the
+                        animal ID and the dates the records were created.
+                    </p>
+
+                    <p>
+                        Because some animals had multiple intake records, the matching
+                        process had to determine which records belonged with each outcome.
+                        After the records were matched, I built a rescue suitability scoring
+                        system that scores each animal for different rescue missions based
+                        on breed, age, and sex. Those scores are then used to rank the
+                        animals so the dashboard can show the strongest candidates first.
+                    </p>
+
+                    <p>
+                        I also reorganized the project as it became more complex. The data
+                        preparation, matching, scoring, and dashboard helper functions were
+                        separated into their own modules so each part had a specific job.
+                        I added helper functions for tasks such as exporting data, selecting
+                        candidates, and handling missing location information. Breaking the
+                        project apart this way made the code easier to read, test, and
+                        maintain.
+                    </p>
+
+
+                    <h3>
+                        Reflection
+                    </h3>
+
+                    <p>
+                        The biggest thing I learned during this enhancement was how much
+                        planning goes into building a good algorithm. Writing the code was
+                        only one part of the process. I spent a lot of time thinking about
+                        how the data should move through each step so the final results would
+                        be accurate.
+                    </p>
+
+                    <p>
+                        I also learned how much easier a larger project is to manage when the
+                        code is modular. As I added each enhancement, I tested the results
+                        before moving on to the next step. That helped me catch problems
+                        early instead of trying to troubleshoot everything at the end.
+                    </p>
+
+                    <p>
+                        One challenge I ran into was getting the dashboard table to behave
+                        the way I wanted. I originally used Dash's active cell feature to
+                        determine which animal was selected, but it always left an unwanted
+                        highlighted cell. After trying several approaches, I switched to
+                        Dash's supported row selection instead. It added a radio button to
+                        the table, which was not exactly the appearance I originally wanted,
+                        but it solved the problem and made the code much cleaner.
+                    </p>
+
+                    <p>
+                        That experience reinforced that the best solution is not always
+                        forcing the software to behave a certain way. Sometimes using the
+                        supported, reliable, and maintainable approach is the better design
+                        decision.
+                    </p>
+
+                    <p>
+                        Overall, the project changed from a dashboard that mainly filtered
+                        information into one that prepares, analyzes, scores, ranks, and then
+                        presents the data. The enhancement gave me more experience designing
+                        algorithms, organizing larger projects, testing my work, and making
+                        decisions that improve both the code and the user experience.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- #endregion -->
+
+
+        </section>
+
+    </main>
+
+
+    <!--================================================
+        JavaScript
+
+        Shared site functionality is loaded here.
+    ================================================-->
+
+    <!-- #region JAVASCRIPT -->
+
+    <script src="../assets/js/main.js"></script>
+
+    <!-- #endregion -->
+
+
+</body>
+
+</html>
