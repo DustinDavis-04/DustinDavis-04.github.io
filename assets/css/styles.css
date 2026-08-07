@@ -68,7 +68,7 @@ body {
 .site-shell {
     width: min(1100px, calc(100% - 48px));
     margin: 0 auto;
-    padding-top: 120px;
+    padding: 100px 0;
 }
 
 
@@ -114,4 +114,162 @@ h1 {
     margin-top: 25px;
     color: var(--muted);
     line-height: 1.8;
+}
+
+
+/*================================================
+    Site Header
+
+    The header stays simple so visitors can quickly
+    find the main sections of the portfolio.
+================================================*/
+
+.site-header {
+    width: 100%;
+    border-bottom: 1px solid var(--panel-border);
+    background: rgba(50, 53, 58, 0.96);
+}
+
+
+/* Keep the navigation aligned with the rest of the page content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(1100px, calc(100% - 48px));
+    min-height: 76px;
+    margin: 0 auto;
+}
+
+
+/* Use the name as the site identifier instead of adding a separate logo */
+.site-brand {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.12rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* Keep the main links together on the right side of the header */
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* Each navigation link has room underneath for the circuit line */
+.navigation-link {
+    position: relative;
+    padding: 28px 0 24px;
+
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        color 200ms ease,
+        text-shadow 200ms ease;
+}
+
+
+/* Draw the circuit trace underneath the selected or hovered link */
+.navigation-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 17px;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.55);
+
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease;
+}
+
+
+/* Add a small connection point at the end of the circuit trace */
+.navigation-link::before {
+    position: absolute;
+    right: -2px;
+    bottom: 14px;
+
+    width: 4px;
+    height: 4px;
+
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background: var(--background);
+
+    content: "";
+    opacity: 0;
+    transition: opacity 150ms ease 150ms;
+}
+
+
+/* Light the circuit line when the link is active or selected */
+.navigation-link:hover,
+.navigation-link:focus-visible,
+.navigation-link.active {
+    color: var(--text);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.35);
+}
+
+.navigation-link:hover::after,
+.navigation-link:focus-visible::after,
+.navigation-link.active::after {
+    transform: scaleX(1);
+}
+
+.navigation-link:hover::before,
+.navigation-link:focus-visible::before,
+.navigation-link.active::before {
+    opacity: 1;
+}
+
+
+/*================================================
+    Small Screen Navigation
+
+    Allow the header to wrap instead of letting
+    the links run outside the screen.
+================================================*/
+
+@media (max-width: 800px) {
+
+    .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .main-navigation {
+        flex-wrap: wrap;
+        gap: 8px 22px;
+        margin-top: 12px;
+    }
+
+    .navigation-link {
+        padding: 10px 0 14px;
+    }
+
+    .navigation-link::after {
+        bottom: 7px;
+    }
+
+    .navigation-link::before {
+        bottom: 4px;
+    }
+
 }
