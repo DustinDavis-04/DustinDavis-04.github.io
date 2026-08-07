@@ -391,3 +391,107 @@ h1 {
     }
 
 }
+
+
+/*================================================
+    Operator Profile
+
+    This section gives visitors a quick overview
+    of my background, experience, and current goals.
+================================================*/
+
+.profile-section {
+    padding: 110px 0;
+}
+
+
+/* Keep section headings consistent throughout the portfolio */
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    margin-top: 14px;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+
+/* Split the profile into a summary and quick reference details */
+.profile-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 42px;
+}
+
+
+/* Keep the profile paragraphs readable without stretching too wide */
+.profile-summary {
+    max-width: 720px;
+}
+
+.profile-summary p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.profile-summary p + p {
+    margin-top: 18px;
+}
+
+
+/* Display key profile details in a clean console-style panel */
+.profile-details {
+    padding: 28px;
+
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    background: rgba(42, 47, 56, 0.78);
+}
+
+
+/* Separate each detail without making the panel feel crowded */
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 18px 0;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.profile-item:first-child {
+    padding-top: 0;
+}
+
+.profile-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+
+/* Use the label as a small console heading */
+.profile-label {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+}
+
+.profile-value {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+
+/* Stack the profile sections when there is not enough horizontal space */
+@media (max-width: 850px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
