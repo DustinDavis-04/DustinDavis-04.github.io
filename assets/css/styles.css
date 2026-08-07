@@ -218,13 +218,45 @@ h1 {
 
     border: 2px solid var(--accent);
     border-radius: 50%;
-    background: var(--background);
+    background: radial-gradient(
+        circle,
+        #e0faff 0%,
+        #67e8f9 35%,
+        var(--accent) 70%
+    );
 
     content: "";
     opacity: 0;
     transition: opacity 150ms ease 150ms;
 }
 
+/* Add a small glowing connection point at the end of the circuit trace */
+.navigation-link::before {
+    position: absolute;
+    right: -2px;
+    bottom: 14px;
+
+    width: 4px;
+    height: 4px;
+
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        #e0faff 0%,
+        #67e8f9 35%,
+        var(--accent) 70%
+    );
+
+    box-shadow:
+        0 0 4px rgba(103, 232, 249, 0.8),
+        0 0 8px rgba(34, 211, 238, 0.45);
+
+    content: "";
+    opacity: 0;
+    transition: opacity 150ms ease 150ms;
+}
 
 /* Light the circuit line when the link is active or selected */
 .navigation-link:hover,
