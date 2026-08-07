@@ -397,12 +397,78 @@
 }
 
 
-/* Split the profile into a summary and quick reference details */
+/* Split the profile into an image, summary, and quick reference details */
 .profile-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
-    gap: 52px;
+    grid-template-columns: 190px minmax(0, 1fr) minmax(290px, 0.75fr);
+    gap: 36px;
     align-items: start;
+}
+
+
+/* Keep the profile image styled like part of the Project Archive interface */
+.profile-image-panel {
+    position: relative;
+}
+
+
+/* Frame the image using the same panel styling used throughout the site */
+.profile-image-frame {
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(34, 211, 238, 0.28);
+    border-radius: 14px;
+
+    background: rgba(18, 26, 36, 0.45);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(34, 211, 238, 0.03);
+}
+
+
+/* Add the familiar cyan interface line to the image panel */
+.profile-image-frame::before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+
+    width: 54px;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+            var(--accent),
+            transparent);
+
+    content: "";
+}
+
+
+/* Keep the portrait square without distorting the image */
+.profile-image {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+
+/* Treat the image caption like a small archive identifier */
+.profile-image-label {
+    margin-top: 12px;
+
+    color: var(--accent);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -528,11 +594,12 @@
 @media (max-width: 850px) {
 
     .profile-grid {
-        grid-template-columns: 1fr;
-        gap: 38px;
+        grid-template-columns: 160px 1fr;
+        gap: 32px;
     }
 
     .profile-details {
+        grid-column: 1 / -1;
         max-width: 560px;
     }
 
@@ -556,6 +623,18 @@
 
     .profile-summary {
         padding-left: 16px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image-panel {
+        max-width: 190px;
+    }
+
+    .profile-details {
+        grid-column: auto;
     }
 
 }
@@ -641,11 +720,9 @@
     width: 68px;
     height: 2px;
 
-    background: linear-gradient(
-        90deg,
-        var(--accent),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            var(--accent),
+            transparent);
 
     content: "";
 }
@@ -911,11 +988,9 @@
     width: 62px;
     height: 2px;
 
-    background: linear-gradient(
-        90deg,
-        var(--accent),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            var(--accent),
+            transparent);
 
     content: "";
 }
