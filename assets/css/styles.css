@@ -17,7 +17,7 @@
 /* #region THEME COLORS */
 
 :root {
-    --background: #32353a;
+    --background: #181f2b;
     --panel: #161b22;
     --panel-border: #273447;
 
@@ -62,14 +62,24 @@ body {
 
     /* Keep the circuit design subtle so it does not compete with the content */
     background-color: var(--background);
-    background-image: url("../images/circuit-background.svg");
+    background-image:
+        linear-gradient(135deg,
+            rgba(8, 12, 18, 0.02) 28%,
+            rgba(8, 12, 18, 0.25) 35%,
+            rgba(8, 12, 18, 0.28) 42%,
+            rgba(8, 12, 18, 0.30) 51%,
+            rgba(8, 12, 18, 0.28) 58%,
+            rgba(8, 12, 18, 0.25) 65%,
+            rgba(8, 12, 18, 0.02) 72%),
+        url("../images/circuit-background.svg");
+
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
 
     color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -105,6 +115,7 @@ body {
     color: var(--accent);
     font-size: 0.8rem;
     font-weight: bold;
+    font-family: "Orbitron", sans-serif;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
 }
@@ -174,14 +185,87 @@ h1 {
 }
 
 
-/* Use the name as the site identifier instead of adding a separate logo */
+/* Keep the Project Archive branding together as one home link */
 .site-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
     color: var(--text);
-    font-size: 1rem;
-    font-weight: bold;
-    letter-spacing: 0.12rem;
     text-decoration: none;
+}
+
+
+/* Use the initials as a small interface-style site mark */
+.brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+
+    color: var(--accent);
+
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+
+    background: rgba(18, 26, 36, 0.55);
+
+    box-shadow:
+        0 0 8px rgba(34, 211, 238, 0.15),
+        inset 0 0 10px rgba(34, 211, 238, 0.04);
+
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease;
+}
+
+
+/* Stack the archive name above my name */
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+}
+
+
+/* Make the archive title the primary part of the branding */
+.brand-copy strong {
+    color: var(--text);
+
+    font-size: 0.82rem;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
+}
+
+
+/* Keep my name visible without competing with the archive title */
+.brand-copy>span {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 0.68rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+
+/* Give the site mark a small response when the home link is selected */
+.site-brand:hover .brand-mark,
+.site-brand:focus-visible .brand-mark {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.3),
+        inset 0 0 10px rgba(34, 211, 238, 0.06);
 }
 
 
@@ -201,6 +285,7 @@ h1 {
     color: var(--muted);
     font-size: 0.82rem;
     font-weight: bold;
+    font-family: "Orbitron", sans-serif;
     letter-spacing: 0.08rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -241,12 +326,10 @@ h1 {
 
     border: 2px solid var(--accent);
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        #e0faff 0%,
-        #67e8f9 35%,
-        var(--accent) 70%
-    );
+    background: radial-gradient(circle,
+            #e0faff 0%,
+            #67e8f9 35%,
+            var(--accent) 70%);
 
     content: "";
     opacity: 0;
@@ -265,12 +348,10 @@ h1 {
     border: 2px solid var(--accent);
     border-radius: 50%;
 
-    background: radial-gradient(
-        circle,
-        #e0faff 0%,
-        #67e8f9 35%,
-        var(--accent) 70%
-    );
+    background: radial-gradient(circle,
+            #e0faff 0%,
+            #67e8f9 35%,
+            var(--accent) 70%);
 
     box-shadow:
         0 0 4px rgba(103, 232, 249, 0.8),
@@ -318,6 +399,15 @@ h1 {
         align-items: flex-start;
         flex-direction: column;
         padding: 20px 0;
+    }
+
+    .site-brand {
+        align-self: flex-start;
+    }
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
     }
 
     .main-navigation {

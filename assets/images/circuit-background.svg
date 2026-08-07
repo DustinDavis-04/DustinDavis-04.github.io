@@ -4,11 +4,11 @@
 
     <!-- Circuit traces stay near the edges so the page content remains readable -->
     <g fill="none"
-       stroke="#67e8f9"
+       stroke="#82ceda"
        stroke-width="1.5"
        stroke-linecap="round"
        stroke-linejoin="round"
-       opacity="0.11">
+       opacity="0.08">
 
         <!-- Upper-left circuit paths -->
         <path d="M0 90 H150 L205 145 H330" />
@@ -41,17 +41,17 @@
         <path d="M1445 900 V850 L1390 795 H1285" />
 
         <!-- Small connection nodes make the paths look like circuit traces -->
-        <circle cx="330" cy="145" r="4" />
-        <circle cx="280" cy="190" r="4" />
-        <circle cx="235" cy="245" r="4" />
-        <circle cx="300" cy="635" r="4" />
-        <circle cx="345" cy="755" r="4" />
+        <rect x="326" y="141" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="276" y="186" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="231" y="241" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="296" y="631" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="341" y="751" width="8" height="8" rx="2" fill="#82ceda" />
 
-        <circle cx="1270" cy="145" r="4" />
-        <circle cx="1325" cy="200" r="4" />
-        <circle cx="1365" cy="260" r="4" />
-        <circle cx="1300" cy="630" r="4" />
-        <circle cx="1255" cy="755" r="4" />
+        <rect x="1266" y="141" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="1321" y="196" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="1361" y="256" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="1296" y="626" width="8" height="8" rx="2" fill="#82ceda" />
+        <rect x="1251" y="751" width="8" height="8" rx="2" fill="#82ceda" />
 
     </g>
 </svg>
