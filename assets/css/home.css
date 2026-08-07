@@ -400,8 +400,8 @@
 /* Split the profile into an image, summary, and quick reference details */
 .profile-grid {
     display: grid;
-    grid-template-columns: 190px minmax(0, 1fr) minmax(290px, 0.75fr);
-    gap: 36px;
+    grid-template-columns: 140px minmax(0, 1fr) minmax(290px, 0.75fr);
+    gap: 30px;
     align-items: start;
 }
 
