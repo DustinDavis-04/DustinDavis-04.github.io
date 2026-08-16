@@ -12,11 +12,70 @@
 }
 
 
-/* Give the project introduction enough room without stretching too wide */
+/* Match the introduction styling used across the updated portfolio */
 .project-page-header {
+    position: relative;
+
     max-width: 850px;
+    padding-left: 24px;
 }
 
+
+/* Add the glowing interface marker used on other major pages */
+.project-page-header::before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.55);
+
+    content: "";
+}
+
+
+/* Extend a short circuit line from the section marker */
+.project-page-header::after {
+    position: absolute;
+    top: 11px;
+    left: 7px;
+
+    width: 46px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
+/* Keep the artifact label clear of the circuit marker */
+.project-page-header .system-label {
+    margin-left: 42px;
+}
+
+
+/* Give the project title the same strong hierarchy as other pages */
+.project-page-header h1 {
+    margin-top: 14px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+}
+
+
+/* Keep the project introduction readable without stretching too far */
 .project-page-summary {
     max-width: 760px;
     margin-top: 22px;
@@ -27,7 +86,7 @@
 }
 
 
-/* Display the main project details in a compact information grid */
+/* Display the main project details like a compact system information panel */
 .project-overview-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -35,12 +94,19 @@
 
     margin-top: 48px;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
     overflow: hidden;
-    background: var(--panel-border);
+
+    background: rgba(34, 211, 238, 0.18);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.08),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
 }
 
+
+/* Keep each overview item visually connected but easy to scan */
 .project-overview-item {
     display: flex;
     flex-direction: column;
@@ -49,64 +115,74 @@
     min-height: 120px;
     padding: 22px;
 
-    background: rgba(42, 47, 56, 0.94);
+    background: rgba(18, 26, 36, 0.62);
 }
 
 
 /* Separate the main parts of each artifact page */
 .project-content-section {
+    max-width: 900px;
     margin-top: 80px;
 }
 
+
+/* Use the same interface typography as the rest of the portfolio */
 .project-content-section h2 {
     margin-top: 12px;
 
+    font-family: "Orbitron", sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 
 /* Main reading panel used for artifact details and narratives */
 .project-content-panel {
+    position: relative;
+
     max-width: 900px;
     margin-top: 28px;
-    padding: 32px;
+    padding: 34px;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.82);
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
+
+    background: rgba(18, 26, 36, 0.48);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.08),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
 }
 
+
+/* Add the small cyan interface line used across the portfolio panels */
+.project-content-panel::before {
+    position: absolute;
+    top: -1px;
+    left: 26px;
+
+    width: 68px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
+/* Keep project descriptions comfortable to read */
 .project-content-panel p {
     color: var(--muted);
     line-height: 1.9;
 }
 
+
 /* Give longer project descriptions some extra space */
 .project-content-panel p + p {
     margin-top: 18px;
-}
-
-
-/* Reduce the project information grid as the screen gets smaller */
-@media (max-width: 900px) {
-
-    .project-overview-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .project-overview-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-content-panel {
-        padding: 24px;
-    }
-
 }
 
 
@@ -118,6 +194,7 @@
     color: var(--text);
     font-size: 1.2rem;
 }
+
 
 .project-content-panel h3:first-child {
     margin-top: 0;
@@ -134,53 +211,89 @@
 }
 
 
-/* Make repository links stand out against the project page background */
+/* Match repository buttons to the stronger homepage button styling */
 .project-resource-links .primary-button {
-    padding-left: 8px;
-    padding-right: 8px;
+    min-height: 46px;
+    padding: 0 20px;
 
-    background: var(--accent);
-    color: #1f252b;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
 
-    border: 1px solid #8be9f5;
+    background: linear-gradient(
+        90deg,
+        #2f63d8,
+        var(--accent)
+    );
+
+    color: #f5fbff;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
 
     box-shadow:
-        0 0 8px rgba(34, 211, 238, 0.35),
-        0 0 16px rgba(34, 211, 238, 0.18);
+        0 0 10px rgba(34, 211, 238, 0.16),
+        0 0 18px rgba(34, 211, 238, 0.08);
+
+    transition:
+        box-shadow 200ms ease,
+        transform 200ms ease;
 }
 
 
-/* Give the repository button a stronger response when hovered */
+/* Give the repository links the same interaction style as other buttons */
 .project-resource-links .primary-button:hover,
 .project-resource-links .primary-button:focus-visible {
-    background: #67e8f9;
+    transform: translateY(-2px);
 
     box-shadow:
-        0 0 10px rgba(103, 232, 249, 0.55),
-        0 0 20px rgba(34, 211, 238, 0.28);
+        0 0 10px rgba(34, 211, 238, 0.25),
+        0 0 20px rgba(34, 211, 238, 0.14);
 }
 
 
-/* Keep the original artifact link visible against the project background */
-.project-resource-links .secondary-button {
-    padding-left: 8px;
-    padding-right: 8px;
+/* Reduce the project information grid as the screen gets smaller */
+@media (max-width: 900px) {
 
-    border-color: var(--accent);
-    color: var(--text);
+    .project-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-    background: rgba(34, 211, 238, 0.08);
 }
 
 
-/* Give the original artifact link the same responsive feel */
-.project-resource-links .secondary-button:hover,
-.project-resource-links .secondary-button:focus-visible {
-    background: rgba(34, 211, 238, 0.16);
+@media (max-width: 600px) {
 
-    box-shadow:
-        0 0 8px rgba(34, 211, 238, 0.35),
-        0 0 16px rgba(34, 211, 238, 0.18);
+    .project-page-header {
+        padding-left: 18px;
+    }
+
+    .project-page-header .system-label {
+        margin-left: 34px;
+    }
+
+    .project-page-header::after {
+        width: 36px;
+    }
+
+    .project-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content-panel {
+        padding: 24px;
+    }
+
+    .project-resource-links {
+        flex-direction: column;
+    }
+
+    .project-resource-links .primary-button {
+        width: 100%;
+    }
+
 }
 
 /* #endregion */
