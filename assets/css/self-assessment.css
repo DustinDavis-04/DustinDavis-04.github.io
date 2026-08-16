@@ -1,8 +1,9 @@
 /*================================================
     Professional Self Assessment
 
-    This page provides space for the full reflection
-    without making the home page too crowded.
+    This page presents the final reflection using
+    the same Project Archive visual style as the
+    rest of the portfolio.
 ================================================*/
 
 /* #region PROFESSIONAL SELF ASSESSMENT */
@@ -12,28 +13,235 @@
 }
 
 
-/* Keep the assessment comfortable to read on larger screens */
-.assessment-content {
-    max-width: 850px;
-    margin-top: 48px;
-    padding: 36px;
+/* Keep the page introduction aligned with the visual style used on Home */
+.assessment-section .section-heading {
+    position: relative;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
-    background: rgba(42, 47, 56, 0.82);
+    max-width: 820px;
+    margin-bottom: 46px;
+    padding-left: 24px;
 }
 
-.assessment-content p {
+
+/* Add the same glowing interface marker used throughout the homepage */
+.assessment-section .section-heading::before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.55);
+
+    content: "";
+}
+
+
+/* Extend a short circuit line from the section marker */
+.assessment-section .section-heading::after {
+    position: absolute;
+    top: 11px;
+    left: 7px;
+
+    width: 46px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
+/* Keep the system label clear of the circuit marker */
+.assessment-section .section-heading .system-label {
+    margin-left: 42px;
+}
+
+
+/* Give the main page heading stronger hierarchy */
+.assessment-section .section-heading h1 {
+    margin-top: 14px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+
+/* Keep the introduction readable without stretching too far */
+.assessment-section .section-description {
+    max-width: 760px;
+    margin-top: 20px;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* Stack the reflection sections with consistent spacing */
+.assessment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    max-width: 900px;
+    margin-top: 48px;
+}
+
+
+/* Treat each reflection topic like a Project Archive information panel */
+.assessment-block {
+    position: relative;
+
+    padding: 34px;
+
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
+
+    background: rgba(18, 26, 36, 0.48);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.08),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
+}
+
+
+/* Add the same cyan interface line used on the homepage panels */
+.assessment-block::before {
+    position: absolute;
+    top: -1px;
+    left: 26px;
+
+    width: 68px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
+/* Use a small archive-style label above each reflection topic */
+.assessment-label {
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+
+/* Keep section titles easy to scan */
+.assessment-block h2 {
+    margin-bottom: 22px;
+
+    color: var(--text);
+
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    line-height: 1.3;
+}
+
+
+/* Keep the reflection readable without losing the darker interface look */
+.assessment-block p {
     color: var(--muted);
     line-height: 1.9;
 }
 
 
-/* Reduce the panel spacing on smaller screens */
+/* Separate paragraphs within each reflection topic */
+.assessment-block p + p {
+    margin-top: 20px;
+}
+
+
+/* Continue naturally from the assessment into the project archive */
+.assessment-project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    margin-top: 28px;
+    padding: 0 20px;
+
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #2f63d8,
+        var(--accent)
+    );
+
+    color: #f5fbff;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        box-shadow 200ms ease,
+        transform 200ms ease;
+}
+
+
+/* Give the project link the same interaction style as the homepage buttons */
+.assessment-project-link:hover,
+.assessment-project-link:focus-visible {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.2),
+        0 0 18px rgba(34, 211, 238, 0.12);
+}
+
+
+/* Tighten the page on smaller screens */
 @media (max-width: 600px) {
 
+    .assessment-section .section-heading {
+        padding-left: 18px;
+    }
+
+    .assessment-section .section-heading .system-label {
+        margin-left: 34px;
+    }
+
+    .assessment-section .section-heading::after {
+        width: 36px;
+    }
+
     .assessment-content {
+        gap: 20px;
+    }
+
+    .assessment-block {
         padding: 24px;
+    }
+
+    .assessment-project-link {
+        width: 100%;
     }
 
 }
