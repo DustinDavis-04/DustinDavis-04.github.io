@@ -58,9 +58,9 @@
 
     -webkit-text-stroke: 1px var(--accent);
 
-    text-shadow: 
-        0 0 8px rgba(34, 211, 238, 0.28),
-        0 0 16px rgba(34, 211, 238, 0.14);
+    filter: drop-shadow(
+        0 0 3px rgbs(34, 211, 238, 0.28)
+    );
 }
 
 
