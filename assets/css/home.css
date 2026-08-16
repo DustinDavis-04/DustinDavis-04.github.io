@@ -48,6 +48,9 @@
 
 /* Use an outlined treatment to give the hero more visual identity */
 .hero-last-name {
+    position: relative;
+    z-index: 1;
+
     margin-top: 8px;
 
     color: transparent;
@@ -57,10 +60,23 @@
     font-weight: 700;
 
     -webkit-text-stroke: 1px var(--accent);
+}
 
-    filter: 
-        drop-shadow(0 0 2px rgbs(34, 211, 238, 0.65))
-        drop-shadow(0 0 7px rgbs(34, 211, 238, 0.22))
+
+/* Create a soft glow behind the outline without filling the letters */
+.hero-last-name::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px var(--accent);
+
+    filter: blur(4px);
+    opacity: 0.38;
+
+    content: attr(data-text);
 }
 
 
