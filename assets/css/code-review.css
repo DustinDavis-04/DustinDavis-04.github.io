@@ -12,28 +12,131 @@
 }
 
 
+/* Match the page introduction styling used on the Self Assessment page */
+.code-review-section > .section-heading {
+    position: relative;
+
+    max-width: 820px;
+    margin-bottom: 46px;
+    padding-left: 24px;
+}
+
+
+/* Add the glowing interface marker used across the portfolio */
+.code-review-section > .section-heading::before {
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.55);
+
+    content: "";
+}
+
+
+/* Extend a short circuit line from the section marker */
+.code-review-section > .section-heading::after {
+    position: absolute;
+    top: 11px;
+    left: 7px;
+
+    width: 46px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
+/* Keep the label clear of the circuit marker */
+.code-review-section > .section-heading .system-label {
+    margin-left: 42px;
+}
+
+
+/* Give the main page title the same hierarchy as the other major pages */
+.code-review-section > .section-heading h1 {
+    margin-top: 14px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+
+/* Keep the introduction comfortable to read */
+.code-review-section > .section-heading .section-description {
+    max-width: 760px;
+    margin-top: 20px;
+
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
 /* Give the recorded review its own space near the top of the page */
 .review-video-section {
+    max-width: 900px;
     margin-top: 70px;
 }
 
+
+/* Use the interface font for the major review heading */
 .review-video-section h2 {
     margin-top: 12px;
 
+    font-family: "Orbitron", sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 
-/* Frame the embedded review video without adding unnecessary empty space */
+/* Frame the embedded video like a Project Archive interface panel */
 .code-review-content {
+    position: relative;
+
     max-width: 900px;
     margin-top: 28px;
     padding: 12px;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
 
-    background: rgba(42, 47, 56, 0.82);
+    background: rgba(18, 26, 36, 0.48);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.08),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
+}
+
+
+/* Add the same cyan interface line used on the other panels */
+.code-review-content::before {
+    position: absolute;
+    top: -1px;
+    left: 26px;
+
+    width: 68px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
 }
 
 
@@ -45,12 +148,13 @@
     aspect-ratio: 16 / 9;
 
     border: 0;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 
 /* Separate each artifact review into its own major section */
 .artifact-review {
+    max-width: 900px;
     margin-top: 90px;
 }
 
@@ -62,54 +166,91 @@
     gap: 22px;
 }
 
+
+/* Style each artifact number like an archive identifier */
 .review-number {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
 
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
 
     border: 1px solid var(--accent);
-    border-radius: 50%;
+    border-radius: 10px;
+
+    background: rgba(18, 26, 36, 0.5);
 
     color: var(--accent);
-    font-size: 1rem;
-    font-weight: bold;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
 
     box-shadow:
-        0 0 8px rgba(34, 211, 238, 0.22),
-        inset 0 0 8px rgba(34, 211, 238, 0.08);
+        0 0 8px rgba(34, 211, 238, 0.18),
+        inset 0 0 8px rgba(34, 211, 238, 0.05);
 }
+
 
 .artifact-review-heading h2 {
     margin-top: 6px;
 
+    font-family: "Orbitron", sans-serif;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 
 /* Main reading panel for the findings from each code review */
 .review-panel {
+    position: relative;
+
     max-width: 900px;
     margin-top: 28px;
-    padding: 32px;
+    padding: 34px;
 
-    border: 1px solid var(--panel-border);
-    border-radius: 6px;
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 14px;
 
-    background: rgba(42, 47, 56, 0.82);
+    background: rgba(18, 26, 36, 0.48);
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.08),
+        inset 0 0 22px rgba(34, 211, 238, 0.02);
 }
 
 
-/* Break up the findings without making the page feel like a report */
+/* Add the same small cyan interface line used throughout the portfolio */
+.review-panel::before {
+    position: absolute;
+    top: -1px;
+    left: 26px;
+
+    width: 68px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        transparent
+    );
+
+    content: "";
+}
+
+
+/* Break up findings and enhancement direction without over-styling */
 .review-panel h3 {
     margin-top: 30px;
     margin-bottom: 12px;
 
     color: var(--text);
+
     font-size: 1.2rem;
 }
+
 
 .review-panel h3:first-child {
     margin-top: 0;
@@ -122,6 +263,7 @@
     line-height: 1.9;
 }
 
+
 .review-panel p + p {
     margin-top: 18px;
 }
@@ -130,7 +272,22 @@
 /* Adjust spacing when the page gets narrow */
 @media (max-width: 600px) {
 
-    .code-review-content,
+    .code-review-section > .section-heading {
+        padding-left: 18px;
+    }
+
+    .code-review-section > .section-heading .system-label {
+        margin-left: 34px;
+    }
+
+    .code-review-section > .section-heading::after {
+        width: 36px;
+    }
+
+    .code-review-content {
+        padding: 8px;
+    }
+
     .review-panel {
         padding: 24px;
     }
@@ -140,7 +297,8 @@
     }
 
     .review-number {
-        flex-shrink: 0;
+        width: 46px;
+        height: 46px;
     }
 
 }
